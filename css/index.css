@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* Paleta de colores */
+:root {
+  --bg-primary: #0b132b;    /* Prussian Blue */
+  --bg-secondary: #1c2541;  /* Space Indigo */
+  --accent-dark: #3a506b;   /* Dusk Blue */
+  --accent-light: #afbbf2;  /* Periwinkle */
+  --text-highlight: #d3fff3;/* Frozen Water */
+    --main-gradient: linear-gradient(135deg, var(--bg-primary), var(--accent-dark), var(--text-highlight));
+    
+}
+
+
+/* Body */ 
+body {
+    display: flex; 
+    width: 100%;
+    height: 100vh;
+    background-color: var(--accent-light);
+}
