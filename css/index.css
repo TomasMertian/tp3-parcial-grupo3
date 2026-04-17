@@ -118,7 +118,7 @@ body.cerrado {
     padding-left: 56px;
 }
 
-/* cuando body recibe clase cerrado, el menu se echica tambien */
+/* cuando body recibe clase cerrado, el .menu-desplegable se echica tambien */
 body.cerrado .menu-desplegable {
     width: 56px;
 }
@@ -133,4 +133,5 @@ body.cerrado .inicio-link span {
 body.cerrado .inicio-link {
     justify-content: center;
 }
+
 /* ------------- */
