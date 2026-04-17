@@ -71,3 +71,38 @@ body {
     font-weight: 600;
     color: var(--bg-primary);
 }
+
+/*INICIO*/
+.inicio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+.inicio .item-inicio{
+    position: relative;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.inicio .inicio-link{
+    display: flex;
+    padding: 0;
+    color: var (var(--bg-primary));
+    text-decoration: none;
+    border-radius: 0.3rem;
+}
+.inicio-link i{
+    font-size: 1.3rem;
+    padding: 0 0.8rem;
+}
+.inicio-link span{
+    font-size: 0.8rem;
+    font-weight: 500;
+    
+}
+.inicio .inicio-link:hover { /*efecto al pasar el mouse*/
+    background-color: var(--accent-light);
+    transform: translateX(5px);
+}
