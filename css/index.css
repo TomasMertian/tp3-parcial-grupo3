@@ -118,18 +118,18 @@ body.cerrado {
     padding-left: 56px;
 }
 
-/* El menú también se achica */
+/* cuando body recibe clase cerrado, el menu se echica tambien */
 body.cerrado .menu-desplegable {
     width: 56px;
 }
 
-/* Oculta los textos cuando esta cerrado */
+/* oculta los textos cuando esta cerrado */
 body.cerrado .titulo span,
 body.cerrado .inicio-link span {
     display: none;
 }
 
-/* Centra los iconos horizontalmente cuando esta cerrado */
+/* centra los iconos horizontalmente cuando esta cerrado */
 body.cerrado .inicio-link {
     justify-content: center;
 }
