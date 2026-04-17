@@ -6,11 +6,11 @@
 }
 /* Paleta de colores */
 :root {
-  --bg-primary: #0b132b;    /* Prussian Blue */
-  --bg-secondary: #1c2541;  /* Space Indigo */
-  --accent-dark: #3a506b;   /* Dusk Blue */
-  --accent-light: #afbbf2;  /* Periwinkle */
-  --text-highlight: #d3fff3;/* Frozen Water */
+    --bg-primary: #0b132b;    /* Prussian Blue */
+    --bg-secondary: #1c2541;  /* Space Indigo */
+    --accent-dark: #3a506b;   /* Dusk Blue */
+    --accent-light: #afbbf2;  /* Periwinkle */
+    --text-highlight: #d3fff3;/* Frozen Water */
     --main-gradient: linear-gradient(135deg, var(--bg-primary), var(--accent-dark), var(--text-highlight));
     
 }
@@ -22,4 +22,52 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--accent-light);
+}
+
+.menu-desplegable {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem; /*240 px*/
+    height: 100%;
+    padding: 1.4rem 1rem;
+    background-color: var(--accent-light);
+    box-shadow: 1px 0px 10px var(--bg-secondary);
+    transition: width 0.5s ease;
+}
+
+/* Boton del menu */
+.menu-boton{
+    position: absolute;
+    top: 3.5%;
+    right: -0.87rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--accent-light);
+    color: var(--bg-primary);
+    box-shadow: 2px 2px 5px var(--bg-secondary);
+    cursor: pointer;
+    transition: right 0.3s ease;
+}
+
+/* Titulo del menu */
+.titulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 0.5rem;
+    margin-bottom: 1.8rem;
+    overflow: hidden;
+}
+
+.titulo span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--bg-primary);
 }
