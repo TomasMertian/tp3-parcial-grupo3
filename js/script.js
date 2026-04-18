@@ -25,12 +25,70 @@ function cargarInicio() {
         <br>
         <div class="imagenes-container">
             <img src="/css/componentes/img/925547ab210b12e869b3f331e63b54f3.jpg" alt="imagen-estudio" class="imagen-estudio">
-            <p class="speech-informativo">Bienvenidos al portal de alumnos. Acá vas a encontrar toda la información sobre las mesas de exámenes, materiales de estudio y el cronograma de la carrera.</p>
-
         </div>
-    
-
-    
+        <p class="speech-informativo">Bienvenidos al portal de alumnos. Acá vas a encontrar toda la información sobre las mesas de exámenes, materiales de estudio y el cronograma de la carrera.</p>
+        <br>
+        <div class="cronograma-grid">
+            <div class="hijo-grid">
+                <div class="hijo-header">Enero</div>
+                    <div class="card-body">Receso estival.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Febrero</div>
+                    <div class="card-body">Mesas de examen (Turno Feb/Mar) e inscripcion a materias del 1er cuatrimestre.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Marzo</div>
+                    <div class="card-body">Inicio de cursada y charla de bienvenida para ingresantes.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Abril</div>
+                    <div class="card-body">Periodo de primeros parciales y entrega de trabajos prácticos.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Mayo</div>
+                    <div class="card-body">Mesas especiales de examen y trámites de equivalencias.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Junio</div>
+                    <div class="card-body">Cierre del primer cuatrimestre y firma de actas.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Julio</div>
+                    <div class="card-body">Receso invernal y turno de exámenes finales.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Agosto</div>
+                    <div class="card-body">Inicio del segundo cuatrimestre e inscripciones.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Septiembre</div>
+                    <div class="card-body">Semana del estudiante y eventos institucionales.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Octubre</div>
+                    <div class="card-body">Periodo de segundos parciales y coloquios</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Noviembre</div>
+                    <div class="card-body">Finalización de clases y entrega de proyectos finales.</div>
+            </div>
+            
+            <div class="hijo-grid">
+                <div class="hijo-header">Diciembre</div>
+                    <div class="card-body">Turnos de exámenes finales y cierre del ciclo lectivo.</div>
+            </div>
+        </div>    
     </div>
     `;
 }
