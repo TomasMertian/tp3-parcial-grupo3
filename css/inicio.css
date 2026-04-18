@@ -1,8 +1,33 @@
 #seccion-inicio{
-    margin-left: 350px;
-    width: calc(100% -350px); /*esto hace que no se salga el texto de la pantalla*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin-left: 200px;
+    width: calc(100% -200px); /*esto hace que no se salga el texto de la pantalla*/
 }
 
-#seccion-inicio .titulo-inicio h1{
-    background-color: var(--bg-secondary);
+#seccion-inicio .titulo-inicio{
+    text-align: center;
+}
+
+#seccion-inicio .parrafo-inicio{
+    font-style: italic;
+    opacity: 50%;
+}
+#seccion-inicio .container-imagenes{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+#seccion-inicio .imagen-estudio{
+    border: 1px;
+    border-radius: 15%;
+    width: 500px;
+    height: auto;
+}
+#seccion-inicio .speech-informativo{
+    font-style: italic;
+    opacity: 50%;
 }
