@@ -17,7 +17,14 @@ const linkLogin = document.querySelector('.pag-login');
 
 // definen funciones para inyectar el contenido de cada seccion adentro del contenedor principal
 function cargarInicio() {
-    contenedor.innerHTML = `<h1>Hola Inicio</h1><p>Contenido del main</p>`;
+    contenedor.innerHTML = `
+    <div id=seccion-inicio>
+        <h1 class="titulo-inicio">Bienvenido</h1>
+        <p class="parrafo-inicio">Le damos la bienvenida al aula virtual de la Universidad Nacional</p>
+
+        
+    </div>
+    `;
 }
 
 function cargarCursos() {

@@ -1,0 +1,8 @@
+#seccion-inicio{
+    margin-left: 350px;
+    width: calc(100% -350px); /*esto hace que no se salga el texto de la pantalla*/
+}
+
+#seccion-inicio .titulo-inicio h1{
+    background-color: var(--bg-secondary);
+}
