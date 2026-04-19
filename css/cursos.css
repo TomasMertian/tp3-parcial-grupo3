@@ -38,6 +38,7 @@
     margin-top: 10px;
     font-size: 24px;
     color: var(--bg-primary);
+    letter-spacing: 3px;
 }
 
 .titulo-cursos {
@@ -79,14 +80,22 @@
 
 /* texto de las cards */
 .card-curso-titulo {
-    color: #ffffff;
+    color: var(--text-highlight);
 }
 
 .card-curso-desc {
     color: var(--text-highlight);
     font-size: 14px;
     opacity: 0.9;
-}sssss
+    margin-bottom: auto;
+    margin-top: 12px;
+}
+
+.card-curso-equipo {
+    color: var(--text-highlight);
+    font-size: 14px;
+    opacity: 0.9;
+}
 
 /* efecto de la card cuando paso el mouse */
 .card-curso:hover {
