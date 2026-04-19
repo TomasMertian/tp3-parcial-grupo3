@@ -1,4 +1,6 @@
 @import './cursos.css';
+@import "inicio.css";
+@import "contacto.css" ;
 
 * {
     box-sizing: border-box;

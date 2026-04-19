@@ -1,0 +1,68 @@
+.seccion-contacto {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centre el titulo y las tarjetas horizontalmente */
+    width: 100%;
+}
+
+.titulo-contacto {
+    font-size: 2.2rem;
+    color: var(--text-highlight); 
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* use flexbox para poner las cards una al lado de la otra */
+.cards-container {
+    display: flex;
+    gap: 25px; /* espacio entre las cards */
+    justify-content: center;
+    flex-wrap: wrap; /* si el menu se despliega y no hay lugar, la card baja sola */
+    width: 100%;
+}
+
+/* diseño de cada card */
+.card-contacto {
+    background-color: var(--bg-secondary); 
+    border: 2px solid var(--accent-dark);  
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1;
+    min-width: 280px; 
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    
+    /* una transicion para que el efecto de cuando pasamos el mouse sea suave */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* efecto cuando pasamos el mouse por encima */
+.card-contacto:hover {
+    transform: translateY(-5px); 
+    border-color: var(--accent-light); 
+}
+
+/* estilo para los iconos de boxicons */
+.card-icono {
+    font-size: 3rem;
+    color: var(--accent-light);
+    margin-bottom: 15px;
+}
+
+.card-contacto h3 {
+    color: var(--text-highlight);
+    margin-bottom: 15px;
+}
+
+.card-contacto p {
+    color: #ffffff; 
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* resaltado para etiquetas */
+.card-contacto strong {
+    color: var(--accent-light);
+} 
