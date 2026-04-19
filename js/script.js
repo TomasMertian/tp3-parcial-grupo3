@@ -96,8 +96,33 @@ function cargarCursos() {
 }
 
 function cargarContacto() {
-    contenedor.innerHTML = `<h1>contacto</h1><p>formulario de contacto</p>`;
+    contenedor.innerHTML = `
+        <section class="seccion-contacto">
+            <h1 class="titulo-contacto">Contactanos</h1>
+            
+            <div class="cards-container">
+                <article class="card-contacto">
+                    <div class="card-icono">
+                        <i class='bx bx-map-pin'></i>
+                    </div>
+                    <h3>Atencion Presencial</h3>
+                    <p>11 de abril 461</p>
+                    <p>Oficina 3, Primer Piso</p>
+                </article>
+
+                <article class="card-contacto">
+                    <div class="card-icono">
+                        <i class='bx bx-laptop'></i>
+                    </div>
+                    <h3>Atencion Virtual</h3>
+                    <p><strong>Mail:</strong><br> consultasutnfrbb@gmail.com</p>
+                    <p><strong>Teléfonos:</strong><br> 4553826 <br> 2915236442</p>
+                </article>
+            </div>
+        </section>
+    `;
 }
+
 
 function cargarPerfil() {
     contenedor.innerHTML = `<h1>perfil</h1><p>datos del usuario</p>`;
