@@ -1,3 +1,5 @@
+@import './cursos.css';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,11 +12,9 @@
     --bg-secondary: #1c2541;  /* Space Indigo */
     --accent-dark: #3a506b;   /* Dusk Blue */
     --accent-light: #afbbf2;  /* Periwinkle */
-    --text-highlight: #d3fff3;/* Frozen Water */
+    --text-highlight: #d3fff3; /* Frozen Water */
     --main-gradient: linear-gradient(135deg, var(--bg-primary), var(--accent-dark), var(--text-highlight));
-    
 }
-
 
 /* Body */ 
 body {
@@ -34,13 +34,14 @@ body {
     align-items: center;
     width: 240px;
     height: 100%;
-    padding: 24px 16px;
     background-color: var(--accent-light);
     box-shadow: 1px 0px 10px var(--bg-secondary);
     transition: width 0.5s ease;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-/* Boton del menu */
+/* boton del menu */
 .menu-boton{
     position: absolute;
     top: 3.5%;
@@ -56,17 +57,19 @@ body {
     box-shadow: 2px 2px 5px var(--bg-secondary);
     cursor: pointer;
     transition: right 0.3s ease;
+    z-index: 100;
 }
 
-/* Titulo del menu */
+/* titulo del menu */
 .titulo {
     width: 100%;
     display: flex;
     align-items: center;
     gap: 12px;
-    padding-left: 8px;
     margin-bottom: 28px;
     overflow: hidden;
+    justify-content: center;
+    padding-top: 12px;
 }
 
 .titulo h4 {
@@ -75,7 +78,7 @@ body {
     color: var(--bg-primary);
 }
 
-/*INICIO*/
+/* INICIO */
 .inicio {
     width: 100%;
     display: flex;
@@ -92,45 +95,72 @@ body {
 .inicio .inicio-link{
     display: flex;
     padding: 0;
-    color: var var(--bg-primary);
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;   
+    padding: 12px 0;
+    color: var (--bg-primary);
     text-decoration: none;
     border-radius: 4px;
+    gap: 8px;
 }
 .inicio-link i{
     font-size: 20px;
-    padding: 0 12px;
+    padding: 0;
 }
 .inicio-link h4{
     font-size: 14px;
     font-weight: 500;
-    
+    margin: 0;
 }
 
-.inicio .inicio-link:hover { /*efecto al pasar el mouse*/
-    background-color: var(--accent-light);
-    transform: translateX(5px);
+/* efecto al pasar el mouse */
+.inicio .inicio-link:hover {
+    transform: translateY(-2px);
+}
+
+/* resalta la opcion del menu dependiendo la pagina en la que este */
+.inicio .inicio-link.activo {
+    background-color: var(--accent-dark); 
+    color: var(--text-highlight);      
+}
+
+body.cerrado .inicio .inicio-link.activo {
+    opacity: 0.6;
 }
 
 /* css para la funcion del menu */
 
-/* Cuando el body tiene la clase cerrado, el padding se achica */
+/* cuando el body tiene la clase cerrado, el padding se achica */
 body.cerrado {
     padding-left: 56px;
 }
 
-/* El menú también se achica */
+/* el menu tambien se achica */
 body.cerrado .menu-desplegable {
     width: 56px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-/* Oculta los textos cuando esta cerrado */
+/* oculta los textos cuando esta cerrado */
 body.cerrado .titulo h4,
 body.cerrado .inicio-link h4 {
     display: none;
 }
 
-/* Centra los iconos horizontalmente cuando esta cerrado */
+/* centra los iconos horizontalmente cuando esta cerrado */
 body.cerrado .inicio-link {
     justify-content: center;
+    height: 40px;
+    width: 100%;
 }
 /* ------------- */
+
+#contenedor-principal {
+    flex: 1;           
+    width: 100%;       
+    display: flex;
+    flex-direction: column;
+}
