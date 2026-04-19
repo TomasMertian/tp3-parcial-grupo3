@@ -102,22 +102,30 @@ function cargarCursos() {
         <div class="mis-cursos">
             <div class="card-curso">
                 <h3 class="card-curso-titulo">Programacion 3</h3>
-                <p class="card-curso-desc">Lorem, ipsum dolor.</p>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Gustavo Ramoscelli</p>
+                <p class="card-curso-equipo">Ayudante: Maria Victoria Ruiz</p>
                 <button class="btn-curso">Ver curso</button>
             </div>
             <div class="card-curso">
                 <h3 class="card-curso-titulo">Base de datos 2</h3>
-                <p class="card-curso-desc">Lorem, ipsum dolor.</p>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Joel Partida</p>
+                <p class="card-curso-equipo">Ayudante: F. Damián Ene</p>
                 <button class="btn-curso">Ver curso</button>
             </div>
             <div class="card-curso">
                 <h3 class="card-curso-titulo">Metodologia de sistemas 1</h3>
-                <p class="card-curso-desc">Lorem, ipsum dolor.</p>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Sebastián Fell</p>
+                <p class="card-curso-equipo">Ayudante: Javier Kinter</p>
                 <button class="btn-curso">Ver curso</button>
             </div>
             <div class="card-curso">
                 <h3 class="card-curso-titulo">Ingles 2</h3>
-                <p class="card-curso-desc">Lorem, ipsum dolor.</p>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Agustina Cortalezzi</p>
+                <p class="card-curso-equipo">Ayudante: Carla Allende</p>
                 <button class="btn-curso">Ver curso</button>
             </div>
         </div>
@@ -128,22 +136,30 @@ function cargarCursos() {
         <div class="todos-cursos">
             <div class="card-curso">
                 <h3 class="card-curso-titulo">Programacion 1</h3>
-                <p class="card-curso-desc">Lorem, ipsum dolor.</p>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Damián Ene</p>
+                <p class="card-curso-equipo">Ayudante: Ricardo Menna</p>
                 <button class="btn-curso">Ver curso</button>
             </div>
             <div class="card-curso">
                 <h3 class="card-curso-titulo">Programacion 2</h3>
-                <p class="card-curso-desc">Lorem, ipsum dolor.</p>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Damián Ene</p>
+                <p class="card-curso-equipo">Ayudante: Nicolás Andreis</p>
                 <button class="btn-curso">Ver curso</button>
             </div>
             <div class="card-curso">
-                <h3 class="card-curso-titulo">Base de datos 1</h3>
-                <p class="card-curso-desc">Lorem, ipsum dolor.</p>
+                <h3 class="card-curso-titulo">Arquitectura y Sistemas operativos</h3>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Mateo Menvielle</p>
+                <p class="card-curso-equipo">Ayudante: Damián Ene</p>
                 <button class="btn-curso">Ver curso</button>
             </div>
             <div class="card-curso">
                 <h3 class="card-curso-titulo">Matematicas</h3>
-                <p class="card-curso-desc">Lorem, ipsum dolor.</p>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Paula Senra</p>
+                <p class="card-curso-equipo">Ayudante: Mariana Valentini</p>
                 <button class="btn-curso">Ver curso</button>
             </div>
         </div>
