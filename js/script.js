@@ -92,7 +92,88 @@ function cargarInicio() {
 }
 
 function cargarCursos() {
-    contenedor.innerHTML = `<h1>cursos</h1><p>Lista de materias</p>`;
+    contenedor.innerHTML =
+    `
+    <div class="seccion-cursos">
+
+        <h1 class="titulo-cursos">Cursos</h1>
+
+        <h2>Mis cursos</h2>
+        <div class="mis-cursos">
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Programacion 3</h3>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Gustavo Ramoscelli</p>
+                <p class="card-curso-equipo">Ayudante: Maria Victoria Ruiz</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Base de datos 2</h3>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Joel Partida</p>
+                <p class="card-curso-equipo">Ayudante: F. Damián Ene</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Metodologia de sistemas 1</h3>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Sebastián Fell</p>
+                <p class="card-curso-equipo">Ayudante: Javier Kinter</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Ingles 2</h3>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Agustina Cortalezzi</p>
+                <p class="card-curso-equipo">Ayudante: Carla Allende</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+        </div>
+
+        <hr class="separador-seccion">
+
+        <h2>Todos los cursos</h2>
+        <div class="todos-cursos">
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Programacion 1</h3>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Damián Ene</p>
+                <p class="card-curso-equipo">Ayudante: Ricardo Menna</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Programacion 2</h3>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Damián Ene</p>
+                <p class="card-curso-equipo">Ayudante: Nicolás Andreis</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Arquitectura y Sistemas operativos</h3>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Mateo Menvielle</p>
+                <p class="card-curso-equipo">Ayudante: Damián Ene</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Matematicas</h3>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Paula Senra</p>
+                <p class="card-curso-equipo">Ayudante: Mariana Valentini</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+        </div>
+    </div>
+    `;
+
+    /* mensaje cuando se hace click en el boton */
+    const botones = contenedor.querySelectorAll('.btn-curso');
+
+    botones.forEach(boton => {
+        boton.addEventListener("click", () => {
+            alert("Este curso no esta disponible actualmente");
+        });
+    });
 }
 
 function cargarContacto() {
@@ -138,6 +219,18 @@ function cargarLogin() {
 
 // define una funcion que recibe el nombre de la seccion y usa un switch para ejecutar la funcion de carga correspondiente
 function navegar(seccion) {
+
+    /* selecciona todos los obejtos con clase .inicio-link y les quita la clase "activo" si es que la tienen*/
+    document.querySelectorAll(".inicio-link").forEach(link => {
+        link.classList.remove("activo");
+    });
+
+    /* agrega clase "activo" dependiendo la pagina que cargue */
+    const linkActivo = document.querySelector(`.pag-${seccion}`);
+    if (linkActivo) {
+        linkActivo.classList.add("activo");
+    }
+
     switch (seccion) {
         case 'inicio':
             cargarInicio();
