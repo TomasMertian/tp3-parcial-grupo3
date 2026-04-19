@@ -22,7 +22,7 @@ function cargarInicio() {
         <h1 class="titulo-inicio">Bienvenido</h1>
         <p class="parrafo-inicio">Le damos la bienvenida al aula virtual de la Universidad Nacional</p>
         <div class="imagenes-container">
-            <img src="/css/componentes/img/925547ab210b12e869b3f331e63b54f3.jpg" alt="imagen-estudio" class="imagen-estudio">
+            <img src="./css/componentes/img/925547ab210b12e869b3f331e63b54f3.jpg" alt="imagen-estudio" class="imagen-estudio">
         </div>
         <p class="speech-informativo">Bienvenidos al portal de alumnos. Acá vas a encontrar toda la información sobre las mesas de exámenes, fechas administrativas y el cronograma de la Universidad.</p>
         <h1 class ="header-cronograma"> CRONOGRAMA TENTATIVO AÑO CURRICULAR</h1>
