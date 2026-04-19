@@ -116,7 +116,7 @@ function cargarContacto() {
                     </div>
                     <h3>Atencion Virtual</h3>
                     <p><strong>Mail:</strong><br> consultasutnfrbb@gmail.com</p>
-                    <p><strong>Teléfonos:</strong><br> 4553826 <br> 2915236442</p>
+                    <p><strong>Telefonos:</strong><br> 4553826 <br> 2915236442</p>
                 </article>
             </div>
         </section>
