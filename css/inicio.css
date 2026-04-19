@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center; 
     text-align: center;
-    margin-left: 250px;
-    width: calc(100% - 250px);
+    margin-left: 200px;
+    width: calc(100% - 200px);
 }
 
 #seccion-inicio .titulo-inicio{
@@ -79,7 +79,35 @@
 #seccion-inicio .titulo-inicio, .parrafo-inicio, .imagenes-container, .speech-informativo, .header-cronograma {
     margin-bottom: 10px;
 } /*esto reemplaza las etiquetas <br>*/
-
+@media (max-width: 768px) {
+    #seccion-inicio {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    #seccion-inicio .imagenes-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #seccion-inicio .imagen-estudio {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+    #seccion-inicio .cronograma-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    #seccion-inicio .hijo-grid {
+        width: 100%;
+        height: auto;
+        min-height: 150px;
+    }
+    #seccion-inicio .card-body {
+        height: auto;
+        min-height: 100px;
+    }
+}
 @keyframes caer {
     0% {
         transform: translateY(-40px); /* esta animacion lo que hace es empezar desde arriba de la pantalla*/ 
