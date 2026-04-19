@@ -38,3 +38,31 @@
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
+/* efecto cuando pasamos el mouse por encima */
+.card-contacto:hover {
+    transform: translateY(-5px); 
+    border-color: var(--accent-light); 
+}
+
+/* estilo para los iconos de boxicons */
+.card-icono {
+    font-size: 3rem;
+    color: var(--accent-light);
+    margin-bottom: 15px;
+}
+
+.card-contacto h3 {
+    color: var(--text-highlight);
+    margin-bottom: 15px;
+}
+
+.card-contacto p {
+    color: #ffffff; 
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* resaltado para etiquetas */
+.card-contacto strong {
+    color: var(--accent-light);
+} 
