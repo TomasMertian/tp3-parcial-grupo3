@@ -97,11 +97,3 @@
         min-height: 100px;
     }
 }
-@keyframes caer {
-    0% {
-        transform: translateY(-40px); /* esta animacion lo que hace es empezar desde arriba de la pantalla*/ 
-    }
-    100% {
-        transform: translateY(0); /*para luego reinsertarse en su lugar original*/
-    }
-}
