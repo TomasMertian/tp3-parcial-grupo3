@@ -39,7 +39,7 @@
 
 #seccion-inicio .header-cronograma{
     text-align: center;
-     animation:caer 1s ease-out forwards;
+    animation:caer 1s ease-out forwards;
 }
 #seccion-inicio .cronograma-grid{
     display: grid;
@@ -74,11 +74,6 @@
     height: 50%;
     background-color: var(--accent-dark);
     font-style: oblique ;
-}
-.footer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 @keyframes caer {
     0% {
