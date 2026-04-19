@@ -34,7 +34,7 @@ function cargarInicio() {
             
             <div class="hijo-grid">
                 <div class="hijo-header">Febrero</div>
-                    <div class="card-body">Mesas de examen (Turno Feb/Mar) e inscripcion a materias del 1er cuatrimestre.</div>
+                    <div class="card-body">Mesas de examen e inscripcion a materias del 1er cuatrimestre.</div>
             </div>
             
             <div class="hijo-grid">
