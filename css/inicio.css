@@ -3,8 +3,6 @@
     flex-direction: column;
     align-items: center; 
     text-align: center;
-    margin-left: 200px;
-    width: calc(100% - 200px);
 }
 
 #seccion-inicio .titulo-inicio{
