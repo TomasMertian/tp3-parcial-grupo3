@@ -210,7 +210,117 @@ function cargarPerfil() {
 }
 
 function cargarProfesores() {
-    contenedor.innerHTML = `<h1>profesores</h1><p>lista de profesores</p>`;
+    contenedor.innerHTML = `
+    <section class = "seccion-profesores">
+        
+        <h1 class = "titulo-profesores">Profesores</h1>
+        <h2> Mis profesores</h2>
+
+        <div class = "profesores-container">
+
+            <article class = "profesor-card">
+                <h3>Gustavo Ramoscelli</h3>
+                <h3>Materia: Programacion 3</h3>
+                <p>Mail: gustavoramoscelli@gmail.com</p>
+                <p>Horario: Lunes y miercoles de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card"> 
+                <h3>Joel Partida</h3>
+                <h3>Materia: Base de datos 2 </h3>
+                <p>Mail: partidajoel.mail@gmail.com</p>
+                <p>Horario: Viernes de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Sebastian Fell</h3>
+                <h3>Materia: Metadologia de sistemas 1</h3>
+                <p>Mail: fellsebastian@yahoo.com.ar</p>
+                <p>Horario:Jueves de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Agustina Cortalezzi</h3>
+                <h3>Materia:Ingles 1</h3>
+                <p>Mail:acortalezzi@frbb.utn.edu.ar</p>
+                <p>Horario:Martes de 18 a 22</p>
+            </article>
+        </div>
+
+        <h2 class = "titulo-ayudantes">Ayudantes</h2>
+        <div class = "profesores-container">
+
+            <article class = "profesor-card">
+                <h3>Maria Victoria Ruiz</h3>
+                <h3>Materia:Programacion 3</h3>
+                <p>Mail:ma.victoria.2509@gmail.com</p>
+                <p>Horario:Lunes y miercoles de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Ene Fernando Damián</h3>
+                <h3>Materia:Base de datos 2</h3>
+                <p>Mail:fernandod.ene@gmail.com</p>
+                <p>Horario:Viernes de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Ene Kinter Javier</h3>
+                <h3>Materia:Metadologia de sistemas 1</h3>
+                <p>Mail:javierekinter@gmail.com</p>
+                <p>Horario:Jueves de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Carla Allende </h3>
+                <h3>Materia:Ingles 1</h3>
+                <p>Mail:carlaallende@frbb.utn.edu.ar</p>
+                <p>Horario:Martes de 18 a 22</p>
+            </article>
+        </div>
+
+
+        <h2 class = "titulo-todos" > Todos los profesores y ayudantes</h2>
+        <div class = "profesores-container">
+
+            <article class = "profesor-card">
+                <h3>Ene Fernando Damián</h3>
+                <h3>Materia:Programacion 1</h3>
+                <p>Mail: fernandod.ene@gmail.com</p>
+                <p>Horario:Martes y Miércoles de 9 a 13hs</p>
+                <p>Ayudante:Ricardo Menna</p>
+                <p>Mail:ricardomenna.uns@gmail.com</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Ene Fernando Damián</h3>
+                <h3>Materia:Programacion 2</h3>
+                <p>Mail:fernandod.ene@gmail.com</p>
+                <p>Horario:Miércoles y Jueves de 8.30 a 12hs</p>
+                <p>Ayudante: Nicolás Andreis</p>
+                <p>Mail: - - </p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Mateo Menvielle</h3>
+                <h3>Materia:Arquitectura y Sistemas Operativos</h3>
+                <p>Mail:mateomenvielle@hotmail.com</p>
+                <p>Horario:Viernes de 9 a 12:30 hs</p>
+                <p>Ayudante: - -</p>
+                <p>Mail: - - </p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Paula Senra</h3>
+                <h3>Materia:Matematicas 1</h3>
+                <p>Mail:paulasenra@frbb.utn.edu.ar</p>
+                <p>Horario:Lunes de 9 a 13</p>
+                <p>Ayudante: Valentini Mariano</p>
+                <p>Mail: valentiniimariana@gmail.com</p>
+            </article>
+        </div>
+    </section>
+    `;
 }
 
 function cargarLogin() {
