@@ -247,6 +247,8 @@ function cargarProfesores() {
             </article>
         </div>
 
+        <hr class="separador-seccion">
+
         <h2 class = "titulo-ayudantes">Ayudantes</h2>
         <div class = "profesores-container">
 
@@ -279,7 +281,8 @@ function cargarProfesores() {
             </article>
         </div>
 
-
+        <hr class="separador-seccion">
+        
         <h2 class = "titulo-todos" > Todos los profesores y ayudantes</h2>
         <div class = "profesores-container">
 
