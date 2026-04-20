@@ -327,7 +327,26 @@ function cargarProfesores() {
 }
 
 function cargarLogin() {
-    contenedor.innerHTML = `<h1>login</h1><p>iniciar sesion</p>`;
+    contenedor.innerHTML = `
+    <section class="seccion-login">
+       <h1 class="titulo-login">Iniciar Sesión</h1>
+    
+       <form class="form-login">
+         <div class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Ingrese su email" required>
+         </div>
+
+         <div class="campo">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+         </div>
+
+         <button type="submit" class="btn-login">Ingresar</button>
+
+      </form>
+    </section>
+`;
 }
 
 // define una funcion que recibe el nombre de la seccion y usa un switch para ejecutar la funcion de carga correspondiente
