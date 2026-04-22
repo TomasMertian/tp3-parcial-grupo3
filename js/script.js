@@ -206,7 +206,30 @@ function cargarContacto() {
 
 
 function cargarPerfil() {
-    contenedor.innerHTML = `<h1>perfil</h1><p>datos del usuario</p>`;
+    contenedor.innerHTML = `
+    <section class = "seccion-perfil">
+        <h1 class = "titulo-perfil> Mi perfil académico</h1>
+
+        <div class = "perfil-card">
+            <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
+
+            <h2><strong>Nombre: </strong> Mariana Rordríguez</h2>
+            <p><strong>Email: </strong>m.rodriguez@universidad.edu.ar</p>
+            <p><strong>Teléfono: </strong>+54 291 455-1234</p>
+
+            <hr>
+
+            <h3><strong>Cursos inscriptos: </strong></h3>
+            <ul>
+                <li>Programación 3</li>
+                <li>Base de Datos 2</li>
+                <li>Metodología de Sistemas 1</li>
+                <li>Inglés 2</li>
+            </ul>
+        </div>
+    </section>    
+    `;
+
 }
 
 function cargarProfesores() {
