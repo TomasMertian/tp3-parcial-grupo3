@@ -208,7 +208,7 @@ function cargarContacto() {
 function cargarPerfil() {
     contenedor.innerHTML = `
     <section class = "seccion-perfil">
-        <h1 class = "titulo-perfil> Mi perfil académico</h1>
+        <h1 class = "titulo-perfil"> Mi perfil académico</h1> <div class= "perfil-card"> 
 
         <div class = "perfil-card">
             <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
