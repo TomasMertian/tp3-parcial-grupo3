@@ -1,4 +1,10 @@
 .perfil-layout {
+    background-color: var(--bg-secondary);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px var(--bg-primary);
+    border: 1px solid var(--bg-primary);
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -7,6 +13,7 @@
     width: 100%;
     max-width: 1000px;
     margin-top: 4px;
+
 }
 
 .seccion-perfil {
@@ -33,7 +40,7 @@
 }
 
 /*Card de perfil*/
-.perfil-card {
+.card-estilo-base {
     padding: 32px;
     border-radius: 8px;
     display: flex;
@@ -46,12 +53,12 @@
     text-align: center;
     transition: transform 0.3s ease;
     border-top: 4px solid var(--accent-light);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--bg-primary);
 }
 
-.perfil-card:hover {
+.card-estilo-base:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px var(--text-highlight);
 }
 
 .foto-usuario {
@@ -90,12 +97,12 @@
     text-align: center;
     transition: transform 0.3s ease;
     border-top: 4px solid var(--accent-light);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--bg-primary);
 }
 
 .perfil-cursos-contenedor:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px var(--text-highlight);
 }
 
 .titulo-cursos {
@@ -106,4 +113,29 @@
     margin-bottom: 20px;
     border-bottom: 1px solid var(--accent-dark);
     padding-bottom: 8px;
+}
+
+/*Lista de los cursos separados en cajitas individuales*/
+.lista-cursos {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-cursos li {
+    background-color: var(--bg-primary);
+    padding: 16px;
+    border-radius: 4px;
+    color: var(--text-highlight);
+    font-weight: 500;
+    border-left: 4px solid var(--accent-light);
+    transition: transform 0.2s ease;
+}
+
+.lista-cursos li:hover {
+    transform: translateX(24px);
+    background-color: var(--accent-dark);
+    border-left-color: var(--text-highlight);
 }
