@@ -217,10 +217,10 @@ function cargarPerfil() {
             <p><strong>Email: </strong>m.rodriguez@universidad.edu.ar</p>
             <p><strong>Teléfono: </strong>+54 291 455-1234</p>
 
-            <hr>
+            <hr class = "separador-seccion">
 
-            <h3><strong>Cursos inscriptos: </strong></h3>
-            <ul>
+            <h3 class ="titulo-cursos"><strong>Cursos inscriptos: </strong></h3>
+            <ul class ="lista-cursos">
                 <li>Programación 3</li>
                 <li>Base de Datos 2</li>
                 <li>Metodología de Sistemas 1</li>
