@@ -92,7 +92,88 @@ function cargarInicio() {
 }
 
 function cargarCursos() {
-    contenedor.innerHTML = `<h1>cursos</h1><p>Lista de materias</p>`;
+    contenedor.innerHTML =
+    `
+    <div class="seccion-cursos">
+
+        <h1 class="titulo-cursos">Cursos</h1>
+
+        <h2>Mis cursos</h2>
+        <div class="mis-cursos">
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Programacion 3</h3>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Gustavo Ramoscelli</p>
+                <p class="card-curso-equipo">Ayudante: Maria Victoria Ruiz</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Base de datos 2</h3>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Joel Partida</p>
+                <p class="card-curso-equipo">Ayudante: F. Damián Ene</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Metodologia de sistemas 1</h3>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Sebastián Fell</p>
+                <p class="card-curso-equipo">Ayudante: Javier Kinter</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Ingles 2</h3>
+                <p class="card-curso-desc">Horario: 18:00 - 22:00</p>
+                <p class="card-curso-equipo">Profesor: Agustina Cortalezzi</p>
+                <p class="card-curso-equipo">Ayudante: Carla Allende</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+        </div>
+
+        <hr class="separador-seccion">
+
+        <h2>Todos los cursos</h2>
+        <div class="todos-cursos">
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Programacion 1</h3>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Damián Ene</p>
+                <p class="card-curso-equipo">Ayudante: Ricardo Menna</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Programacion 2</h3>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Damián Ene</p>
+                <p class="card-curso-equipo">Ayudante: Nicolás Andreis</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Arquitectura y Sistemas operativos</h3>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Mateo Menvielle</p>
+                <p class="card-curso-equipo">Ayudante: Damián Ene</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+            <div class="card-curso">
+                <h3 class="card-curso-titulo">Matematicas</h3>
+                <p class="card-curso-desc">Horario: 8:00 - 12:00</p>
+                <p class="card-curso-equipo">Profesor: Paula Senra</p>
+                <p class="card-curso-equipo">Ayudante: Mariana Valentini</p>
+                <button class="btn-curso">Ver curso</button>
+            </div>
+        </div>
+    </div>
+    `;
+
+    /* mensaje cuando se hace click en el boton */
+    const botones = contenedor.querySelectorAll('.btn-curso');
+
+    botones.forEach(boton => {
+        boton.addEventListener("click", () => {
+            alert("Este curso no esta disponible actualmente");
+        });
+    });
 }
 
 function cargarContacto() {
@@ -129,15 +210,159 @@ function cargarPerfil() {
 }
 
 function cargarProfesores() {
-    contenedor.innerHTML = `<h1>profesores</h1><p>lista de profesores</p>`;
+    contenedor.innerHTML = `
+    <section class = "seccion-profesores">
+        
+        <h1 class = "titulo-profesores">Profesores</h1>
+        <h2> Mis profesores</h2>
+
+        <div class = "profesores-container">
+
+            <article class = "profesor-card">
+                <h3>Gustavo Ramoscelli</h3>
+                <h3>Materia: Programacion 3</h3>
+                <p>Mail: gustavoramoscelli@gmail.com</p>
+                <p>Horario: Lunes y miercoles de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card"> 
+                <h3>Joel Partida</h3>
+                <h3>Materia: Base de datos 2 </h3>
+                <p>Mail: partidajoel.mail@gmail.com</p>
+                <p>Horario: Viernes de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Sebastian Fell</h3>
+                <h3>Materia: Metadologia de sistemas 1</h3>
+                <p>Mail: fellsebastian@yahoo.com.ar</p>
+                <p>Horario:Jueves de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Agustina Cortalezzi</h3>
+                <h3>Materia:Ingles 1</h3>
+                <p>Mail:acortalezzi@frbb.utn.edu.ar</p>
+                <p>Horario:Martes de 18 a 22</p>
+            </article>
+        </div>
+
+        <hr class="separador-seccion">
+
+        <h2 class = "titulo-ayudantes">Ayudantes</h2>
+        <div class = "profesores-container">
+
+            <article class = "profesor-card">
+                <h3>Maria Victoria Ruiz</h3>
+                <h3>Materia:Programacion 3</h3>
+                <p>Mail:ma.victoria.2509@gmail.com</p>
+                <p>Horario:Lunes y miercoles de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Ene Fernando Damián</h3>
+                <h3>Materia:Base de datos 2</h3>
+                <p>Mail:fernandod.ene@gmail.com</p>
+                <p>Horario:Viernes de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Ene Kinter Javier</h3>
+                <h3>Materia:Metadologia de sistemas 1</h3>
+                <p>Mail:javierekinter@gmail.com</p>
+                <p>Horario:Jueves de 18 a 22</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Carla Allende </h3>
+                <h3>Materia:Ingles 1</h3>
+                <p>Mail:carlaallende@frbb.utn.edu.ar</p>
+                <p>Horario:Martes de 18 a 22</p>
+            </article>
+        </div>
+
+        <hr class="separador-seccion">
+        
+        <h2 class = "titulo-todos" > Todos los profesores y ayudantes</h2>
+        <div class = "profesores-container">
+
+            <article class = "profesor-card">
+                <h3>Ene Fernando Damián</h3>
+                <h3>Materia:Programacion 1</h3>
+                <p>Mail: fernandod.ene@gmail.com</p>
+                <p>Horario:Martes y Miércoles de 9 a 13hs</p>
+                <p>Ayudante:Ricardo Menna</p>
+                <p>Mail:ricardomenna.uns@gmail.com</p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Ene Fernando Damián</h3>
+                <h3>Materia:Programacion 2</h3>
+                <p>Mail:fernandod.ene@gmail.com</p>
+                <p>Horario:Miércoles y Jueves de 8.30 a 12hs</p>
+                <p>Ayudante: Nicolás Andreis</p>
+                <p>Mail: - - </p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Mateo Menvielle</h3>
+                <h3>Materia:Arquitectura y Sistemas Operativos</h3>
+                <p>Mail:mateomenvielle@hotmail.com</p>
+                <p>Horario:Viernes de 9 a 12:30 hs</p>
+                <p>Ayudante: - -</p>
+                <p>Mail: - - </p>
+            </article>
+
+            <article class = "profesor-card">
+                <h3>Paula Senra</h3>
+                <h3>Materia:Matematicas 1</h3>
+                <p>Mail:paulasenra@frbb.utn.edu.ar</p>
+                <p>Horario:Lunes de 9 a 13</p>
+                <p>Ayudante: Valentini Mariano</p>
+                <p>Mail: valentiniimariana@gmail.com</p>
+            </article>
+        </div>
+    </section>
+    `;
 }
 
 function cargarLogin() {
-    contenedor.innerHTML = `<h1>login</h1><p>iniciar sesion</p>`;
+    contenedor.innerHTML = `
+    <section class="seccion-login">
+       <h1 class="titulo-login">Iniciar Sesión</h1>
+    
+       <form class="form-login">
+         <div class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Ingrese su email" required>
+         </div>
+
+         <div class="campo">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+         </div>
+
+         <button type="submit" class="btn-login">Ingresar</button>
+
+      </form>
+    </section>
+`;
 }
 
 // define una funcion que recibe el nombre de la seccion y usa un switch para ejecutar la funcion de carga correspondiente
 function navegar(seccion) {
+
+    /* selecciona todos los obejtos con clase .inicio-link y les quita la clase "activo" si es que la tienen*/
+    document.querySelectorAll(".inicio-link").forEach(link => {
+        link.classList.remove("activo");
+    });
+
+    /* agrega clase "activo" dependiendo la pagina que cargue */
+    const linkActivo = document.querySelector(`.pag-${seccion}`);
+    if (linkActivo) {
+        linkActivo.classList.add("activo");
+    }
+
     switch (seccion) {
         case 'inicio':
             cargarInicio();
