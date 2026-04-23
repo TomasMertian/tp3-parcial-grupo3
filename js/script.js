@@ -206,32 +206,37 @@ function cargarContacto() {
 
 
 function cargarPerfil() {
+
+    // const inputNombre = document.querySelector('#input-nombre').value;
+    // const inputEmail = document.querySelector('#email').value;
+
     contenedor.innerHTML = `
-    <section class = "seccion-perfil">
-        <h1 class = "titulo-perfil"> Mi perfil académico</h1> <div class= "perfil-card"> 
+        <section class = "seccion-perfil">
+            <h1 class = "titulo-perfil"> Mi perfil académico</h1> <div class= "perfil-card"> 
 
-        <div class = "perfil-layout">
-            <div class = "card-estilo-base perfil-card">
-                <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
+            <div class = "perfil-layout">
+                <div class = "card-estilo-base perfil-card">
+                    <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
 
-                <h2><strong>Nombre: </strong> Mariana Rordríguez</h2>
-                <p><strong>Email: </strong>m.rodriguez@universidad.edu.ar</p>
-                <p><strong>Teléfono: </strong>+54 291 455-1234</p>
-            </div>
+                    <h2><strong>Nombre: </strong>Ariadna</h2>
+                    <h2><strong>Apellido: </strong>Lavizzari</h2>
+                    <p><strong>Email: </strong>lavizzariariadna@gmail.com</p>
+                    <p><strong>Teléfono: </strong>+54 291 123-4567</p>
+                </div>
 
             <hr class = "separador-seccion">
 
-            <div class="card-estilo-base perfil-cursos-contenedor">
-                <h3 class ="titulo-cursos"><strong>Cursos inscriptos: </strong></h3>
-                <ul class ="lista-cursos">
-                    <li>Programación 3</li>
-                    <li>Base de Datos 2</li>
-                    <li>Metodología de Sistemas 1</li>
-                    <li>Inglés 2</li>
-                </ul>
+                <div class="card-estilo-base perfil-cursos-contenedor">
+                    <h3 class ="titulo-cursos"><strong>Cursos inscriptos: </strong></h3>
+                        <ul class ="lista-cursos">
+                            <li>Programación 3</li>
+                            <li>Base de Datos 2</li>
+                            <li>Metodología de Sistemas 1</li>
+                            <li>Inglés 2</li>
+                        </ul>
+                </div>
             </div>
-        </div>
-    </section>    
+        </section>    
     `;
 
 }
@@ -354,24 +359,33 @@ function cargarProfesores() {
 }
 
 function cargarLogin() {
+
     contenedor.innerHTML = `
     <section class="seccion-login">
-       <h1 class="titulo-login">Iniciar Sesión</h1>
+        <h1 class="titulo-login">Iniciar Sesión</h1>
     
-       <form class="form-login">
-         <div class="campo">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Ingrese su email" required>
-         </div>
+        <form class="form-login">
+            <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Ingrese su email" required>
+        </div>
 
-         <div class="campo">
-          <label for="password">Contraseña</label>
-          <input type="password" id="password" placeholder="Ingrese su contraseña" required>
-         </div>
+        <div class="campo">
+            <label for="input-nombre">Nombre</label>
+            <input type="text" id="input-nombre" placeholder="Ingrese su contraseña" required>
+            </div>
 
-         <button type="submit" class="btn-login">Ingresar</button>
+            <div class="campo">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+        </div>
 
-      </form>
+        
+        <button type="submit" class="btn-login">Ingresar</button>
+
+        
+
+        </form>
     </section>
 `;
 }
