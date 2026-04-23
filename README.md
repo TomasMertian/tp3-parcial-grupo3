@@ -28,11 +28,12 @@ Para el cambio de vistas, centralizamos toda la lógica en la función `navegar(
 ```text
 📂 /
  ┣ 📂 css/             # Estilos generales
- ┃ ┗ 📂 componentes/   # Imágenes estáticas
+ ┃ ┗ 📂 componentes/   # Componentes
+ ┃    ┗ 📂 img/        # Imágenes estáticas
  ┣ 📂 js/              # Scripts principales (navegación, interactividad)
  ┗ 📜 index.html       # Archivo principal (Contenedor SPA)
 ```
 
  ## 👥 Integrantes y Contribuciones - Grupo 3
 
-### Tomás Mertian: 
+### Intengrante 1: 
