@@ -361,7 +361,7 @@ function cargarLogin() {
 
         <div class="campo">
             <label for="input-nombre">Nombre</label>
-            <input type="text" id="input-nombre" placeholder="Ingrese su contraseña" required>
+            <input type="text" id="input-nombre" placeholder="Ingrese su nombre" required>
             </div>
 
             <div class="campo">
