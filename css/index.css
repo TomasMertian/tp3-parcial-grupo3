@@ -1,6 +1,9 @@
 @import './cursos.css';
 @import "./inicio.css";
 @import "./contacto.css" ;
+@import "./profesores.css";
+@import './login.css';
+@import './perfil.css';
 
 * {
     box-sizing: border-box;
