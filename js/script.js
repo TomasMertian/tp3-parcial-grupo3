@@ -218,9 +218,10 @@ function cargarPerfil() {
                 <div class = "card-estilo-base perfil-card">
                     <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
 
-                    <h2><strong>Nombre: </strong>A</h2>
-                    <p><strong>Email: </strong> b@</p>
-                    <p><strong>Teléfono: </strong>+54 291 455-1234</p>
+                    <h2><strong>Nombre: </strong>Ariadna</h2>
+                    <h2><strong>Apellido: </strong>Lavizzari</h2>
+                    <p><strong>Email: </strong>lavizzariariadna@gmail.com</p>
+                    <p><strong>Teléfono: </strong>+54 291 123-4567</p>
                 </div>
 
             <hr class = "separador-seccion">
