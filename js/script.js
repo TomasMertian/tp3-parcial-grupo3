@@ -204,120 +204,144 @@ function cargarContacto() {
 }
 
 function cargarPerfil() {
-  contenedor.innerHTML = `<h1>perfil</h1><p>datos del usuario</p>`;
+  // const inputNombre = document.querySelector('#input-nombre').value;
+  // const inputEmail = document.querySelector('#email').value;
+
+  contenedor.innerHTML = `
+        <section class = "seccion-perfil">
+            <h1 class = "titulo-perfil"> Mi perfil académico</h1> <div class= "perfil-card"> 
+
+            <div class = "perfil-layout">
+                <div class = "card-estilo-base perfil-card">
+                    <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
+
+                    <h2><strong>Nombre: </strong>Ariadna</h2>
+                    <h2><strong>Apellido: </strong>Lavizzari</h2>
+                    <p><strong>Email: </strong>lavizzariariadna@gmail.com</p>
+                    <p><strong>Teléfono: </strong>+54 291 123-4567</p>
+                </div>
+
+            <hr class = "separador-seccion">
+
+                <div class="card-estilo-base perfil-cursos-contenedor">
+                    <h3 class ="titulo-cursos"><strong>Cursos inscriptos: </strong></h3>
+                        <ul class ="lista-cursos">
+                            <li>Programación 3</li>
+                            <li>Base de Datos 2</li>
+                            <li>Metodología de Sistemas 1</li>
+                            <li>Inglés 2</li>
+                        </ul>
+                </div>
+            </div>
+        </section>    
+    `;
 }
 
 function cargarProfesores() {
   contenedor.innerHTML = `
     <section class = "seccion-profesores">
         
-        <h1 class = "titulo-profesores">Profesores</h1>
-        <h2> Mis profesores</h2>
+        <h1 class = "titulo-profesores">PROFESORES</h1>
+        <h2> MIS PROFESORES</h2>
 
         <div class = "profesores-container">
 
             <article class = "profesor-card">
                 <h3>Gustavo Ramoscelli</h3>
-                <h3>Materia: Programacion 3</h3>
+                <p class="materia">Materia: Programacion 3</p>
                 <p>Mail: gustavoramoscelli@gmail.com</p>
-                <p>Horario: Lunes y miercoles de 18 a 22</p>
+                <p>Horario: Lunes y miercoles de 18 a 22 </p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=gustavoramoscelli@gmail.com" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar
+                </a>
+
             </article>
 
             <article class = "profesor-card"> 
                 <h3>Joel Partida</h3>
-                <h3>Materia: Base de datos 2 </h3>
+                <p class = "materia">Materia: Base de datos 2 </p>
                 <p>Mail: partidajoel.mail@gmail.com</p>
                 <p>Horario: Viernes de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=partidajoel.mail@gmail.com"
+                target="_blank"
+                class = "btn-contactar">
+                Contactar</a>
             </article>
 
             <article class = "profesor-card">
                 <h3>Sebastian Fell</h3>
-                <h3>Materia: Metadologia de sistemas 1</h3>
+                <p class = "materia">Materia: Metadologia de sistemas 1</p>
                 <p>Mail: fellsebastian@yahoo.com.ar</p>
-                <p>Horario:Jueves de 18 a 22</p>
+                <p>Horario: Jueves de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=fellsebastian@yahoo.com.ar"
+                target="_blank"
+                class = "btn-contactar">
+                Contactar</a>
             </article>
 
             <article class = "profesor-card">
                 <h3>Agustina Cortalezzi</h3>
-                <h3>Materia:Ingles 1</h3>
-                <p>Mail:acortalezzi@frbb.utn.edu.ar</p>
-                <p>Horario:Martes de 18 a 22</p>
+                <p class = "materia">Materia: Ingles 2</p>
+                <p>Mail: acortalezzi@frbb.utn.edu.ar</p>
+                <p>Horario: Martes de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=acortalezzi@frbb.utn.edu.ar" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar</a>
             </article>
         </div>
 
         <hr class="separador-seccion">
 
-        <h2 class = "titulo-ayudantes">Ayudantes</h2>
+        <h2 class = "titulo-ayudantes">AYUDANTES</h2>
         <div class = "profesores-container">
 
             <article class = "profesor-card">
                 <h3>Maria Victoria Ruiz</h3>
-                <h3>Materia:Programacion 3</h3>
-                <p>Mail:ma.victoria.2509@gmail.com</p>
-                <p>Horario:Lunes y miercoles de 18 a 22</p>
+                <p class = "materia">Materia: Programacion 3</p>
+                <p>Mail: ma.victoria.2509@gmail.com</p>
+                <p>Horario: Lunes y miercoles de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=ma.victoria.2509@gmail.com" target="_blank"
+                class="btn-contactar">
+                Contactar
+                </a>
             </article>
 
             <article class = "profesor-card">
                 <h3>Ene Fernando Damián</h3>
-                <h3>Materia:Base de datos 2</h3>
-                <p>Mail:fernandod.ene@gmail.com</p>
-                <p>Horario:Viernes de 18 a 22</p>
+                <p class = "materia">Materia: Base de datos 2</p>
+                <p>Mail: fernandod.ene@gmail.com</p>
+                <p>Horario: Viernes de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=fernandod.ene@gmail.com" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar</a>
             </article>
 
             <article class = "profesor-card">
-                <h3>Ene Kinter Javier</h3>
-                <h3>Materia:Metadologia de sistemas 1</h3>
-                <p>Mail:javierekinter@gmail.com</p>
-                <p>Horario:Jueves de 18 a 22</p>
+                <h3>Kinter Javier</h3>
+                <p class = "materia">Materia: Metadologia de sistemas 1</p>
+                <p>Mail: javierekinter@gmail.com</p>
+                <p>Horario: Jueves de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=javierekinter@gmail.com"
+                target="_blank"
+                class = "btn-contactar">
+                Contactar
+                </a>
             </article>
 
             <article class = "profesor-card">
                 <h3>Carla Allende </h3>
-                <h3>Materia:Ingles 1</h3>
-                <p>Mail:carlaallende@frbb.utn.edu.ar</p>
-                <p>Horario:Martes de 18 a 22</p>
-            </article>
-        </div>
-
-        <hr class="separador-seccion">
-        
-        <h2 class = "titulo-todos" > Todos los profesores y ayudantes</h2>
-        <div class = "profesores-container">
-
-            <article class = "profesor-card">
-                <h3>Ene Fernando Damián</h3>
-                <h3>Materia:Programacion 1</h3>
-                <p>Mail: fernandod.ene@gmail.com</p>
-                <p>Horario:Martes y Miércoles de 9 a 13hs</p>
-                <p>Ayudante:Ricardo Menna</p>
-                <p>Mail:ricardomenna.uns@gmail.com</p>
-            </article>
-
-            <article class = "profesor-card">
-                <h3>Ene Fernando Damián</h3>
-                <h3>Materia:Programacion 2</h3>
-                <p>Mail:fernandod.ene@gmail.com</p>
-                <p>Horario:Miércoles y Jueves de 8.30 a 12hs</p>
-                <p>Ayudante: Nicolás Andreis</p>
-                <p>Mail: - - </p>
-            </article>
-
-            <article class = "profesor-card">
-                <h3>Mateo Menvielle</h3>
-                <h3>Materia:Arquitectura y Sistemas Operativos</h3>
-                <p>Mail:mateomenvielle@hotmail.com</p>
-                <p>Horario:Viernes de 9 a 12:30 hs</p>
-                <p>Ayudante: - -</p>
-                <p>Mail: - - </p>
-            </article>
-
-            <article class = "profesor-card">
-                <h3>Paula Senra</h3>
-                <h3>Materia:Matematicas 1</h3>
-                <p>Mail:paulasenra@frbb.utn.edu.ar</p>
-                <p>Horario:Lunes de 9 a 13</p>
-                <p>Ayudante: Valentini Mariano</p>
-                <p>Mail: valentiniimariana@gmail.com</p>
+                <p class = "materia">Materia: Ingles 2</p>
+                <p>Mail: carlaallende@frbb.utn.edu.ar</p>
+                <p>Horario: Martes de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=carlaallende@frbb.utn.edu.ar" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar
+                </a>
             </article>
         </div>
     </section>
@@ -328,24 +352,28 @@ function cargarLogin() {
   contenedor.innerHTML = `
     <section class="seccion-login">
         <h1 class="titulo-login">Iniciar Sesión</h1>
-
+    
         <form class="form-login">
             <div class="campo">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Ingrese su email" required>
+        </div>
+
+        <div class="campo">
+            <label for="input-nombre">Nombre</label>
+            <input type="text" id="input-nombre" placeholder="Ingrese su contraseña" required>
             </div>
 
             <div class="campo">
-                <label for="input-nombre">Nombre</label>
-                <input type="text" id="input-nombre" name="nombre" placeholder="Ingrese su nombre" required>
-            </div>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+        </div>
 
-            <div class="campo">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
-            </div>
+        
+        <button type="submit" class="btn-login">Ingresar</button>
 
-            <button type="submit" class="btn-login">Ingresar</button>
+        
+
         </form>
     </section>
     `;
