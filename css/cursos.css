@@ -11,7 +11,7 @@
     padding: 48px 24px 24px 24px;
 }
 
-.separador-seccion {
+.separador-seccion-cursos {
     width: 90%;
     border: 0;
     height: 4px;
@@ -25,9 +25,26 @@
     text-align: center;
     width: 100%;
     margin-bottom: 10px; 
-    color: var(--bg-primary);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* titulos h2 - propiedades PROPIAS */
+.seccion-cursos h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: var(--bg-primary);
+    letter-spacing: 3px;
+}
+
+/* titulo principal - propiedades PROPIAS */
+.titulo-cursos {
+    font-size: 48px !important;
+    font-family: sans-serif;
+    color: var(--bg-primary);
+    display: block;
+    border: none;
+    outline: none !important;;
 }
 
 .mis-cursos {
@@ -42,8 +59,11 @@
 }
 
 .titulo-cursos {
-    font-size: 48px;
+    font-size: 120px;
     font-family: sans-serif;
+    color: var(--bg-primary) !important;
+    text-decoration: none;
+    border-bottom: none;
 }
 
 .seccion-cursos p {
@@ -74,7 +94,7 @@
     background-color: var(--bg-secondary);
     align-items: center; 
     text-align: center; 
-    border: 2px;
+    border: 2px solid transparent;
     transition: transform 0.3s ease;
 }
 
