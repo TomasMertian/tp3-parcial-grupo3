@@ -1,0 +1,94 @@
+.seccion-profesores { /*contenedor principal*/
+    display: flex; /*activa flexbox*/
+    flex-direction:column; /*permite que las cards sean columnas*/    
+    min-height: 100vh; /*altura minima de la pantalla, 100hv evita que el fondo se corte si hay poco contenido*/
+    padding: 48px 24px 24px 24px; /*espacio entre borde y contenido de la pagina (arriba 48, derecha24, abajo24, izquierda24)*/
+    font-size: 15px; /*tamaño de fuente*/
+}
+
+.profesores-container { /*como se acomodan las cards entre si*/
+    display: flex; /*activa Flexbox para que las tarjetas se pongan una al lado de la otra */
+    flex-wrap: wrap; /*baja una card automaticamente cuando no hay espacio a la derecha (util en celulares)*/
+    justify-content: center; /*centrar las cards*/
+    gap: 20px; /*separacion entre las cards*/
+}
+
+.titulo-profesores{ /*titulo*/
+    width: 100%; /*ancho del titulo*/
+    text-align: center; /*alineacion de titulo*/
+    color:var(--bg-secondary); /*color del titulo*/
+    font-family: Georgia, 'Times New Roman', Times, serif /*tipo de fuente*/
+
+}
+
+.seccion-profesores h2 { /*subtitulo*/
+    width: 100%; /*ancho de subtitulo*/
+    text-align: center; /*alineacion de subtitulo*/
+    margin: 40px 0 20px; /*espacio entre elementos*/
+    color:var(--bg-secondary); /*color de subtitulo*/
+    font-family: 'Times New Roman', Times, serif /*tipo de fuente*/
+}
+
+.profesor-card{ /*cards*/
+    background-color: var(--bg-secondary); /*color de fondo de la card*/
+    padding: 20px; /*espacio entre el borde y texto de cards*/
+    border-radius: 8px; /*redondea las esquinas de la card*/
+    width: 350px; /*ancho de card*/
+    display: flex; /*activa flexbox*/
+    flex-direction: column; /*permite que las cards sean columnas*/
+    align-items: center; /*alinear texto en el centro de la card*/
+    transition: 0.3s ease; /*hace que la card se mueva suavemente y dura 0.3s*/
+}
+
+
+.profesor-card p { /*parrafo de las cards*/
+    margin: 5px 0; /*espacio entre elementos, texto */
+    color: var(--accent-light); /*color del texto*/
+}
+
+.profesor-card h3 { /*nombre en las cards (profesores)*/
+    margin: 3px 0; /*espacio arriba y abajo 3px (arriba de la card, abajo de la materia), espacio a los lados 0 */
+    color: var(--text-highlight); /*color de la letra*/
+    text-align: center; /*alinea el texto al centro*/
+
+}
+
+.profesor-card:hover { /*efecto al pasar el mouse*/
+    transform: translateY(-10px); /*mueve la card 5px hacia arriba*/
+}
+
+.materia { /*materia de cada card*/
+    font-weight: bold; /*grosor de la letra, bold = negrita*/
+    color: var(--text-highlight); /*color de la letra*/
+    
+}
+
+
+.separador-seccion{ /*separador entre profesores y ayudantes*/
+    width: 90px;
+    border: 0;
+    height: 2px;
+    background-color: var(--accent-dark);
+    margin: 20px auto;
+    opacity: 1;
+}
+
+.btn-contactar{ /*boton contactar*/
+    background: var(--accent-light); /*color de fondo*/
+    color: var(--bg-primary); /*color de texto*/
+    border: none; /*quita el borde por defecto*/
+    border-radius:8px; /*8px de redondeo de esquinas*/
+    padding: 8px 16px; /*espacio interno 8px arriba y abajo, 16px a los lados*/
+    font-weight: bold; /*letra en negrita*/
+    text-align: center; /*centra el texto "contactar"*/
+    text-decoration: none; /*quita el subrayado por defecto*/
+    cursor: pointer; /*cambia la flecha del mouse al pasar por encima*/
+    width: 75%; /*el boton ocupa el 75% del ancho de la card*/
+    margin-top: auto; /*empuja al boton al fondo de la card*/
+    transition: 0.3s ease; /*hace que el boton se mueva suavemente y dura 0.3s*/
+}
+
+.btn-contactar:hover { /*efecto al pasar el mouse por el boton*/
+    background-color: var(--text-highlight); /*color de fondo*/
+    transform: translateY(-2px); /*mueve el boton 2px hacia arriba*/
+}

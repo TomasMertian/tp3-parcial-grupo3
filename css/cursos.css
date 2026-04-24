@@ -1,0 +1,145 @@
+/* seccion general */
+.seccion-cursos {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    min-height: 100vh;
+    gap: 16px;
+    padding: 48px 24px 24px 24px;
+}
+
+.separador-seccion-cursos {
+    width: 90%;
+    border: 0;
+    height: 4px;
+    background-color: var(--accent-dark);
+    margin: 20px 0;
+    opacity: 0.8;
+}
+
+/* titulo de las secciones */
+.titulo-cursos, .seccion-cursos h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* titulos h2 - propiedades PROPIAS */
+.seccion-cursos h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: var(--bg-primary);
+    letter-spacing: 3px;
+}
+
+/* titulo principal - propiedades PROPIAS */
+.titulo-cursos {
+    font-size: 48px !important;
+    font-family: sans-serif;
+    color: var(--bg-primary);
+    display: block;
+    border: none;
+    outline: none !important;;
+}
+
+.mis-cursos {
+    padding-bottom: 20px;
+}
+
+.seccion-cursos h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: var(--bg-primary);
+    letter-spacing: 3px;
+}
+
+.titulo-cursos {
+    font-size: 120px;
+    font-family: sans-serif;
+    color: var(--bg-primary) !important;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.seccion-cursos p {
+    color: var(--accent-light);
+}
+
+/* contenedores de cards */
+.mis-cursos, .todos-cursos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;    
+    width: 100%; 
+    padding: 0 24px; 
+    flex: 1;
+}
+
+/* cards de los cursos */
+.card-curso {
+    padding: 20px;  
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 1 320px; 
+    min-height: 140px; 
+    max-width: 400px;
+    background-color: var(--bg-secondary);
+    align-items: center; 
+    text-align: center; 
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
+}
+
+/* texto de las cards */
+.card-curso-titulo {
+    color: var(--text-highlight);
+}
+
+.card-curso-desc {
+    color: var(--text-highlight);
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: auto;
+    margin-top: 12px;
+}
+
+.card-curso-equipo {
+    color: var(--text-highlight);
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* efecto de la card cuando paso el mouse */
+.card-curso:hover {
+    transform: translateY(-8px);
+    border-color: var(--text-highlight);
+    box-shadow: 0 8px 16px rgba(11, 19, 43, 0.5);
+}
+
+/* boton de la card */
+.btn-curso {
+    background: var(--accent-light);
+    color: var(--bg-primary);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto; 
+    transition: filter 0.3s ease;
+}
+
+.btn-curso:hover {
+    background-color: var(--text-highlight);
+    border-color: var(--accent-light);
+    transform: translateY(-4px);
+}
