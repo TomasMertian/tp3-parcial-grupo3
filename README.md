@@ -226,7 +226,6 @@ y nuevamente, implemente la librería Boxicons para usar iconos representativos 
 
 ## Integrante: Tomás Mertian:
 
----
 
 ### Variables globales
 
