@@ -1,4 +1,4 @@
-.perfil-layout {
+.perfil-card {
     background-color: var(--bg-secondary);
     padding: 32px;
     border-radius: 12px;
@@ -13,6 +13,7 @@
     width: 100%;
     max-width: 1000px;
     margin-top: 4px;
+    margin: 0 auto;
 
 }
 
@@ -106,7 +107,7 @@
 }
 
 .titulo-cursos {
-    color: var(--accent-light);
+    color: var(--accent-light) !important;
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 2px;
