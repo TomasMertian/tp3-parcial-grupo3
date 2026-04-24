@@ -5,19 +5,19 @@ const menu = document.querySelector(".menu-desplegable");
 const boton = document.querySelector(".menu-boton");
 
 // crea una variable llamada boton, y agarra elemento con clase contenedor-principal del html
-const contenedor = document.getElementById('contenedor-principal');
+const contenedor = document.getElementById("contenedor-principal");
 
 // crea variables para cada enlace del menu, agarrando los elementos por su clase del html
-const linkInicio = document.querySelector('.pag-inicio');
-const linkCursos = document.querySelector('.pag-cursos');
-const linkContacto = document.querySelector('.pag-contacto');
-const linkPerfil = document.querySelector('.pag-perfil');
-const linkProfesores = document.querySelector('.pag-profesores');
-const linkLogin = document.querySelector('.pag-login');
+const linkInicio = document.querySelector(".pag-inicio");
+const linkCursos = document.querySelector(".pag-cursos");
+const linkContacto = document.querySelector(".pag-contacto");
+const linkPerfil = document.querySelector(".pag-perfil");
+const linkProfesores = document.querySelector(".pag-profesores");
+const linkLogin = document.querySelector(".pag-login");
 
 // definen funciones para inyectar el contenido de cada seccion adentro del contenedor principal
 function cargarInicio() {
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
     <div id=seccion-inicio>
         <h1 class="titulo-inicio">Bienvenido</h1>
         <p class="parrafo-inicio">Le damos la bienvenida al aula virtual de la Universidad Nacional</p>
@@ -92,8 +92,7 @@ function cargarInicio() {
 }
 
 function cargarCursos() {
-    contenedor.innerHTML =
-    `
+contenedor.innerHTML = `
     <div class="seccion-cursos">
 
         <h1 class="titulo-cursos">Cursos</h1>
@@ -130,7 +129,7 @@ function cargarCursos() {
             </div>
         </div>
 
-        <hr class="separador-seccion">
+        <hr class="separador-seccion-cursos">
 
         <h2>Todos los cursos</h2>
         <div class="todos-cursos">
@@ -167,17 +166,17 @@ function cargarCursos() {
     `;
 
     /* mensaje cuando se hace click en el boton */
-    const botones = contenedor.querySelectorAll('.btn-curso');
+    const botones = contenedor.querySelectorAll(".btn-curso");
 
-    botones.forEach(boton => {
+    botones.forEach((boton) => {
         boton.addEventListener("click", () => {
-            alert("Este curso no esta disponible actualmente");
+        alert("Este curso no esta disponible actualmente");
         });
     });
 }
 
 function cargarContacto() {
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
         <section class="seccion-contacto">
             <h1 class="titulo-contacto">Contactanos</h1>
             
@@ -189,6 +188,7 @@ function cargarContacto() {
                     <h3>Atencion Presencial</h3>
                     <p>11 de abril 461</p>
                     <p>Oficina 3, Primer Piso</p>
+                    <p>Horario: Lunes a viernes de 8:00 - 18:00</p>
                 </article>
 
                 <article class="card-contacto">
@@ -204,13 +204,11 @@ function cargarContacto() {
     `;
 }
 
-
 function cargarPerfil() {
+  // const inputNombre = document.querySelector('#input-nombre').value;
+  // const inputEmail = document.querySelector('#email').value;
 
-    // const inputNombre = document.querySelector('#input-nombre').value;
-    // const inputEmail = document.querySelector('#email').value;
-
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
         <section class = "seccion-perfil">
             <h1 class = "titulo-perfil"> Mi perfil académico</h1> <div class= "perfil-card"> 
 
@@ -238,120 +236,113 @@ function cargarPerfil() {
             </div>
         </section>    
     `;
-
 }
 
 function cargarProfesores() {
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
     <section class = "seccion-profesores">
         
-        <h1 class = "titulo-profesores">Profesores</h1>
-        <h2> Mis profesores</h2>
+        <h1 class = "titulo-profesores">PROFESORES</h1>
+        <h2> MIS PROFESORES</h2>
 
         <div class = "profesores-container">
 
             <article class = "profesor-card">
                 <h3>Gustavo Ramoscelli</h3>
-                <h3>Materia: Programacion 3</h3>
+                <p class="materia">Materia: Programacion 3</p>
                 <p>Mail: gustavoramoscelli@gmail.com</p>
-                <p>Horario: Lunes y miercoles de 18 a 22</p>
+                <p>Horario: Lunes y miercoles de 18 a 22 </p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=gustavoramoscelli@gmail.com" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar
+                </a>
+
             </article>
 
             <article class = "profesor-card"> 
                 <h3>Joel Partida</h3>
-                <h3>Materia: Base de datos 2 </h3>
+                <p class = "materia">Materia: Base de datos 2 </p>
                 <p>Mail: partidajoel.mail@gmail.com</p>
                 <p>Horario: Viernes de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=partidajoel.mail@gmail.com"
+                target="_blank"
+                class = "btn-contactar">
+                Contactar</a>
             </article>
 
             <article class = "profesor-card">
                 <h3>Sebastian Fell</h3>
-                <h3>Materia: Metadologia de sistemas 1</h3>
+                <p class = "materia">Materia: Metadologia de sistemas 1</p>
                 <p>Mail: fellsebastian@yahoo.com.ar</p>
-                <p>Horario:Jueves de 18 a 22</p>
+                <p>Horario: Jueves de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=fellsebastian@yahoo.com.ar"
+                target="_blank"
+                class = "btn-contactar">
+                Contactar</a>
             </article>
 
             <article class = "profesor-card">
                 <h3>Agustina Cortalezzi</h3>
-                <h3>Materia:Ingles 1</h3>
-                <p>Mail:acortalezzi@frbb.utn.edu.ar</p>
-                <p>Horario:Martes de 18 a 22</p>
+                <p class = "materia">Materia: Ingles 2</p>
+                <p>Mail: acortalezzi@frbb.utn.edu.ar</p>
+                <p>Horario: Martes de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=acortalezzi@frbb.utn.edu.ar" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar</a>
             </article>
         </div>
 
         <hr class="separador-seccion">
 
-        <h2 class = "titulo-ayudantes">Ayudantes</h2>
+        <h2 class = "titulo-ayudantes">AYUDANTES</h2>
         <div class = "profesores-container">
 
             <article class = "profesor-card">
                 <h3>Maria Victoria Ruiz</h3>
-                <h3>Materia:Programacion 3</h3>
-                <p>Mail:ma.victoria.2509@gmail.com</p>
-                <p>Horario:Lunes y miercoles de 18 a 22</p>
+                <p class = "materia">Materia: Programacion 3</p>
+                <p>Mail: ma.victoria.2509@gmail.com</p>
+                <p>Horario: Lunes y miercoles de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=ma.victoria.2509@gmail.com" target="_blank"
+                class="btn-contactar">
+                Contactar
+                </a>
             </article>
 
             <article class = "profesor-card">
                 <h3>Ene Fernando Damián</h3>
-                <h3>Materia:Base de datos 2</h3>
-                <p>Mail:fernandod.ene@gmail.com</p>
-                <p>Horario:Viernes de 18 a 22</p>
+                <p class = "materia">Materia: Base de datos 2</p>
+                <p>Mail: fernandod.ene@gmail.com</p>
+                <p>Horario: Viernes de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=fernandod.ene@gmail.com" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar</a>
             </article>
 
             <article class = "profesor-card">
-                <h3>Ene Kinter Javier</h3>
-                <h3>Materia:Metadologia de sistemas 1</h3>
-                <p>Mail:javierekinter@gmail.com</p>
-                <p>Horario:Jueves de 18 a 22</p>
+                <h3>Kinter Javier</h3>
+                <p class = "materia">Materia: Metadologia de sistemas 1</p>
+                <p>Mail: javierekinter@gmail.com</p>
+                <p>Horario: Jueves de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=javierekinter@gmail.com"
+                target="_blank"
+                class = "btn-contactar">
+                Contactar
+                </a>
             </article>
 
             <article class = "profesor-card">
                 <h3>Carla Allende </h3>
-                <h3>Materia:Ingles 1</h3>
-                <p>Mail:carlaallende@frbb.utn.edu.ar</p>
-                <p>Horario:Martes de 18 a 22</p>
-            </article>
-        </div>
-
-        <hr class="separador-seccion">
-        
-        <h2 class = "titulo-todos" > Todos los profesores y ayudantes</h2>
-        <div class = "profesores-container">
-
-            <article class = "profesor-card">
-                <h3>Ene Fernando Damián</h3>
-                <h3>Materia:Programacion 1</h3>
-                <p>Mail: fernandod.ene@gmail.com</p>
-                <p>Horario:Martes y Miércoles de 9 a 13hs</p>
-                <p>Ayudante:Ricardo Menna</p>
-                <p>Mail:ricardomenna.uns@gmail.com</p>
-            </article>
-
-            <article class = "profesor-card">
-                <h3>Ene Fernando Damián</h3>
-                <h3>Materia:Programacion 2</h3>
-                <p>Mail:fernandod.ene@gmail.com</p>
-                <p>Horario:Miércoles y Jueves de 8.30 a 12hs</p>
-                <p>Ayudante: Nicolás Andreis</p>
-                <p>Mail: - - </p>
-            </article>
-
-            <article class = "profesor-card">
-                <h3>Mateo Menvielle</h3>
-                <h3>Materia:Arquitectura y Sistemas Operativos</h3>
-                <p>Mail:mateomenvielle@hotmail.com</p>
-                <p>Horario:Viernes de 9 a 12:30 hs</p>
-                <p>Ayudante: - -</p>
-                <p>Mail: - - </p>
-            </article>
-
-            <article class = "profesor-card">
-                <h3>Paula Senra</h3>
-                <h3>Materia:Matematicas 1</h3>
-                <p>Mail:paulasenra@frbb.utn.edu.ar</p>
-                <p>Horario:Lunes de 9 a 13</p>
-                <p>Ayudante: Valentini Mariano</p>
-                <p>Mail: valentiniimariana@gmail.com</p>
+                <p class = "materia">Materia: Ingles 2</p>
+                <p>Mail: carlaallende@frbb.utn.edu.ar</p>
+                <p>Horario: Martes de 18 a 22</p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=carlaallende@frbb.utn.edu.ar" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar
+                </a>
             </article>
         </div>
     </section>
@@ -359,8 +350,7 @@ function cargarProfesores() {
 }
 
 function cargarLogin() {
-
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
     <section class="seccion-login">
         <h1 class="titulo-login">Iniciar Sesión</h1>
     
@@ -372,7 +362,7 @@ function cargarLogin() {
 
         <div class="campo">
             <label for="input-nombre">Nombre</label>
-            <input type="text" id="input-nombre" placeholder="Ingrese su contraseña" required>
+            <input type="text" id="input-nombre" placeholder="Ingrese su nombre" required>
             </div>
 
             <div class="campo">
@@ -387,44 +377,43 @@ function cargarLogin() {
 
         </form>
     </section>
-`;
+    `;
 }
 
 // define una funcion que recibe el nombre de la seccion y usa un switch para ejecutar la funcion de carga correspondiente
 function navegar(seccion) {
-
     /* selecciona todos los obejtos con clase .inicio-link y les quita la clase "activo" si es que la tienen*/
-    document.querySelectorAll(".inicio-link").forEach(link => {
-        link.classList.remove("activo");
+    document.querySelectorAll(".inicio-link").forEach((link) => {
+    link.classList.remove("activo");
     });
 
     /* agrega clase "activo" dependiendo la pagina que cargue */
     const linkActivo = document.querySelector(`.pag-${seccion}`);
     if (linkActivo) {
-        linkActivo.classList.add("activo");
+    linkActivo.classList.add("activo");
     }
 
     switch (seccion) {
-        case 'inicio':
+        case "inicio":
             cargarInicio();
             break;
-        case 'cursos':
+        case "cursos":
             cargarCursos();
             break;
-        case 'contacto':
-            cargarContacto();
-            break;
-        case 'perfil':
+        case "contacto":
+        cargarContacto();
+        break;
+        case "perfil":
             cargarPerfil();
             break;
-        case 'profesores':
+        case "profesores":
             cargarProfesores();
             break;
-        case 'login':
+        case "login":
             cargarLogin();
             break;
         default:
-            contenedor.innerHTML = "<h1>Error 404</h1>";
+        contenedor.innerHTML = "<h1>Error 404</h1>";
     }
 }
 
@@ -438,12 +427,12 @@ y al registrar el click llama a la funcion alternarMenu */
 boton.addEventListener("click", alternarMenu);
 
 // agrega un evento al hacer click en cada enlace, usando una funcion flecha para llamar a "navegar" con la seccion correcta
-linkInicio.addEventListener('click', () => navegar('inicio'));
-linkCursos.addEventListener('click', () => navegar('cursos'));
-linkContacto.addEventListener('click', () => navegar('contacto'));
-linkPerfil.addEventListener('click', () => navegar('perfil'));
-linkProfesores.addEventListener('click', () => navegar('profesores'));
-linkLogin.addEventListener('click', () => navegar('login'));
+linkInicio.addEventListener("click", () => navegar("inicio"));
+linkCursos.addEventListener("click", () => navegar("cursos"));
+linkContacto.addEventListener("click", () => navegar("contacto"));
+linkPerfil.addEventListener("click", () => navegar("perfil"));
+linkProfesores.addEventListener("click", () => navegar("profesores"));
+linkLogin.addEventListener("click", () => navegar("login"));
 
 // carga inicio como pagina principal
-navegar('inicio');
+navegar("inicio");
