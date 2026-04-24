@@ -188,6 +188,7 @@ contenedor.innerHTML = `
                     <h3>Atencion Presencial</h3>
                     <p>11 de abril 461</p>
                     <p>Oficina 3, Primer Piso</p>
+                    <p>Horario: Lunes a viernes de 8:00 - 18:00</p>
                 </article>
 
                 <article class="card-contacto">
