@@ -226,7 +226,6 @@ y nuevamente, implemente la librería Boxicons para usar iconos representativos 
 
 ## Integrante: Tomás Mertian:
 
-
 ### Variables globales
 
 ```js
@@ -272,13 +271,26 @@ Busca el enlace correspondiente a la sección recibida y, si existe, le agrega l
 
 ```js
     switch (seccion) {
-        case 'inicio':     cargarInicio();     break;
-        case 'cursos':     cargarCursos();     break;
-        case 'contacto':   cargarContacto();   break;
-        case 'perfil':     cargarPerfil();     break;
-        case 'profesores': cargarProfesores(); break;
-        case 'login':      cargarLogin();      break;
-        default:           contenedor.innerHTML = "<h1>Error 404</h1>";
+        case 'inicio':
+            cargarInicio();
+            break;
+        case 'cursos':
+            cargarCursos();
+            break;
+        case 'contacto':
+            cargarContacto();
+            break;
+        case 'perfil':
+            cargarPerfil();
+            break;
+        case 'profesores':
+            cargarProfesores();
+            break;
+        case 'login':
+            cargarLogin();
+            break;
+        default:
+            contenedor.innerHTML = "<h1>Error 404</h1>";
     }
 }
 ```
