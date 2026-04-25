@@ -95,7 +95,7 @@ function cargarCursos() {
 contenedor.innerHTML = `
     <div class="seccion-cursos">
 
-        <h1 class="titulo-cursos">Cursos</h1>
+        <h1 class="titulo-pag-cursos">Cursos</h1>
 
         <h2>Mis cursos</h2>
         <div class="mis-cursos">
