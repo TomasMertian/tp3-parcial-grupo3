@@ -205,6 +205,7 @@ contenedor.innerHTML = `
 }
 
 function cargarPerfil() {
+    //Selectores para futuras funcionalidades 
   // const inputNombre = document.querySelector('#input-nombre').value;
   // const inputEmail = document.querySelector('#email').value;
 
