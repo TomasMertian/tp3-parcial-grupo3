@@ -1,3 +1,4 @@
+/*Contenedor principal que agrupa las tarjetas del perfil*/
 .perfil-card {
     background-color: var(--bg-secondary);
     padding: 32px;
@@ -6,9 +7,8 @@
     border: 1px solid var(--bg-primary);
 
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 32px;
     width: 100%;
     max-width: 1000px;
