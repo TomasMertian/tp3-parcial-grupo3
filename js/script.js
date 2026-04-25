@@ -5,19 +5,19 @@ const menu = document.querySelector(".menu-desplegable");
 const boton = document.querySelector(".menu-boton");
 
 // crea una variable llamada boton, y agarra elemento con clase contenedor-principal del html
-const contenedor = document.getElementById('contenedor-principal');
+const contenedor = document.getElementById("contenedor-principal");
 
 // crea variables para cada enlace del menu, agarrando los elementos por su clase del html
-const linkInicio = document.querySelector('.pag-inicio');
-const linkCursos = document.querySelector('.pag-cursos');
-const linkContacto = document.querySelector('.pag-contacto');
-const linkPerfil = document.querySelector('.pag-perfil');
-const linkProfesores = document.querySelector('.pag-profesores');
-const linkLogin = document.querySelector('.pag-login');
+const linkInicio = document.querySelector(".pag-inicio");
+const linkCursos = document.querySelector(".pag-cursos");
+const linkContacto = document.querySelector(".pag-contacto");
+const linkPerfil = document.querySelector(".pag-perfil");
+const linkProfesores = document.querySelector(".pag-profesores");
+const linkLogin = document.querySelector(".pag-login");
 
 // definen funciones para inyectar el contenido de cada seccion adentro del contenedor principal
 function cargarInicio() {
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
     <div id=seccion-inicio>
         <h1 class="titulo-inicio">Bienvenido</h1>
         <p class="parrafo-inicio">Le damos la bienvenida al aula virtual de la Universidad Nacional</p>
@@ -92,11 +92,10 @@ function cargarInicio() {
 }
 
 function cargarCursos() {
-    contenedor.innerHTML =
-    `
+contenedor.innerHTML = `
     <div class="seccion-cursos">
 
-        <h1 class="titulo-cursos">Cursos</h1>
+        <h1 class="titulo-pag-cursos">Cursos</h1>
 
         <h2>Mis cursos</h2>
         <div class="mis-cursos">
@@ -130,7 +129,7 @@ function cargarCursos() {
             </div>
         </div>
 
-        <hr class="separador-seccion">
+        <hr class="separador-seccion-cursos">
 
         <h2>Todos los cursos</h2>
         <div class="todos-cursos">
@@ -167,17 +166,17 @@ function cargarCursos() {
     `;
 
     /* mensaje cuando se hace click en el boton */
-    const botones = contenedor.querySelectorAll('.btn-curso');
+    const botones = contenedor.querySelectorAll(".btn-curso");
 
-    botones.forEach(boton => {
+    botones.forEach((boton) => {
         boton.addEventListener("click", () => {
-            alert("Este curso no esta disponible actualmente");
+        alert("Este curso no esta disponible actualmente");
         });
     });
 }
 
 function cargarContacto() {
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
         <section class="seccion-contacto">
             <h1 class="titulo-contacto">Contactanos</h1>
             
@@ -189,6 +188,7 @@ function cargarContacto() {
                     <h3>Atencion Presencial</h3>
                     <p>11 de abril 461</p>
                     <p>Oficina 3, Primer Piso</p>
+                    <p>Horario: Lunes a viernes de 8:00 - 18:00</p>
                 </article>
 
                 <article class="card-contacto">
@@ -204,45 +204,42 @@ function cargarContacto() {
     `;
 }
 
-
 function cargarPerfil() {
+  // const inputNombre = document.querySelector('#input-nombre').value;
+  // const inputEmail = document.querySelector('#email').value;
 
-    // const inputNombre = document.querySelector('#input-nombre').value;
-    // const inputEmail = document.querySelector('#email').value;
-
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
         <section class = "seccion-perfil">
-            <h1 class = "titulo-perfil"> Mi perfil académico</h1> <div class= "perfil-card"> 
+            <h1 class = "titulo-perfil"> Mi perfil académico</h1> 
+        
+        <div class= "perfil-card"> 
+            <div class = "card-estilo-base perfil-card">
+                <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
 
-            <div class = "perfil-layout">
-                <div class = "card-estilo-base perfil-card">
-                    <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
-
-                    <h2><strong>Nombre: </strong>Ariadna</h2>
-                    <h2><strong>Apellido: </strong>Lavizzari</h2>
-                    <p><strong>Email: </strong>lavizzariariadna@gmail.com</p>
-                    <p><strong>Teléfono: </strong>+54 291 123-4567</p>
-                </div>
+                <h2><strong>Nombre: </strong>Ariadna</h2>
+                <h2><strong>Apellido: </strong>Lavizzari</h2>
+                <p><strong>Email: </strong>lavizzariariadna@gmail.com</p>
+                <p><strong>Teléfono: </strong>+54 291 123-4567</p>
+            </div>
 
             <hr class = "separador-seccion">
 
-                <div class="card-estilo-base perfil-cursos-contenedor">
-                    <h3 class ="titulo-cursos"><strong>Cursos inscriptos: </strong></h3>
-                        <ul class ="lista-cursos">
-                            <li>Programación 3</li>
-                            <li>Base de Datos 2</li>
-                            <li>Metodología de Sistemas 1</li>
-                            <li>Inglés 2</li>
-                        </ul>
-                </div>
+            <div class="card-estilo-base perfil-cursos-contenedor">
+                <h3 class ="titulo-cursos"><strong>Cursos inscriptos: </strong></h3>
+                    <ul class ="lista-cursos">
+                        <li>Programación 3</li>
+                        <li>Base de Datos 2</li>
+                        <li>Metodología de Sistemas 1</li>
+                        <li>Inglés 2</li>
+                    </ul>
             </div>
+        </div>
         </section>    
     `;
-
 }
 
 function cargarProfesores() {
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
     <section class = "seccion-profesores">
         
         <h1 class = "titulo-profesores">PROFESORES</h1>
@@ -353,8 +350,7 @@ function cargarProfesores() {
 }
 
 function cargarLogin() {
-
-    contenedor.innerHTML = `
+contenedor.innerHTML = `
     <section class="seccion-login">
         <h1 class="titulo-login">Iniciar Sesión</h1>
     
@@ -366,7 +362,7 @@ function cargarLogin() {
 
         <div class="campo">
             <label for="input-nombre">Nombre</label>
-            <input type="text" id="input-nombre" placeholder="Ingrese su contraseña" required>
+            <input type="text" id="input-nombre" placeholder="Ingrese su nombre" required>
             </div>
 
             <div class="campo">
@@ -381,44 +377,43 @@ function cargarLogin() {
 
         </form>
     </section>
-`;
+    `;
 }
 
 // define una funcion que recibe el nombre de la seccion y usa un switch para ejecutar la funcion de carga correspondiente
 function navegar(seccion) {
-
     /* selecciona todos los obejtos con clase .inicio-link y les quita la clase "activo" si es que la tienen*/
-    document.querySelectorAll(".inicio-link").forEach(link => {
-        link.classList.remove("activo");
+    document.querySelectorAll(".inicio-link").forEach((link) => {
+    link.classList.remove("activo");
     });
 
     /* agrega clase "activo" dependiendo la pagina que cargue */
     const linkActivo = document.querySelector(`.pag-${seccion}`);
     if (linkActivo) {
-        linkActivo.classList.add("activo");
+    linkActivo.classList.add("activo");
     }
 
     switch (seccion) {
-        case 'inicio':
+        case "inicio":
             cargarInicio();
             break;
-        case 'cursos':
+        case "cursos":
             cargarCursos();
             break;
-        case 'contacto':
-            cargarContacto();
-            break;
-        case 'perfil':
+        case "contacto":
+        cargarContacto();
+        break;
+        case "perfil":
             cargarPerfil();
             break;
-        case 'profesores':
+        case "profesores":
             cargarProfesores();
             break;
-        case 'login':
+        case "login":
             cargarLogin();
             break;
         default:
-            contenedor.innerHTML = "<h1>Error 404</h1>";
+        contenedor.innerHTML = "<h1>Error 404</h1>";
     }
 }
 
@@ -432,12 +427,12 @@ y al registrar el click llama a la funcion alternarMenu */
 boton.addEventListener("click", alternarMenu);
 
 // agrega un evento al hacer click en cada enlace, usando una funcion flecha para llamar a "navegar" con la seccion correcta
-linkInicio.addEventListener('click', () => navegar('inicio'));
-linkCursos.addEventListener('click', () => navegar('cursos'));
-linkContacto.addEventListener('click', () => navegar('contacto'));
-linkPerfil.addEventListener('click', () => navegar('perfil'));
-linkProfesores.addEventListener('click', () => navegar('profesores'));
-linkLogin.addEventListener('click', () => navegar('login'));
+linkInicio.addEventListener("click", () => navegar("inicio"));
+linkCursos.addEventListener("click", () => navegar("cursos"));
+linkContacto.addEventListener("click", () => navegar("contacto"));
+linkPerfil.addEventListener("click", () => navegar("perfil"));
+linkProfesores.addEventListener("click", () => navegar("profesores"));
+linkLogin.addEventListener("click", () => navegar("login"));
 
 // carga inicio como pagina principal
-navegar('inicio');
+navegar("inicio");
