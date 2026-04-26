@@ -4,7 +4,7 @@ const menu = document.querySelector(".menu-desplegable");
 // crea una variable llamada boton, y agarra elemento con clase .menu-boton del html
 const boton = document.querySelector(".menu-boton");
 
-// crea una variable llamada boton, y agarra elemento con clase contenedor-principal del html
+// crea una variable llamada contenedor, y agarra elemento con clase contenedor-principal del html
 const contenedor = document.getElementById("contenedor-principal");
 
 // crea variables para cada enlace del menu, agarrando los elementos por su clase del html
