@@ -17,7 +17,7 @@ const linkLogin = document.querySelector(".pag-login");
 
 // definen funciones para inyectar el contenido de cada seccion adentro del contenedor principal
 function cargarInicio() {
-  contenedor.innerHTML = `
+contenedor.innerHTML = `
     <div id=seccion-inicio>
         <h1 class="titulo-inicio">Bienvenido</h1>
         <p class="parrafo-inicio">Le damos la bienvenida al aula virtual de la Universidad Nacional</p>
@@ -92,10 +92,10 @@ function cargarInicio() {
 }
 
 function cargarCursos() {
-  contenedor.innerHTML = `
+contenedor.innerHTML = `
     <div class="seccion-cursos">
 
-        <h1 class="titulo-cursos">Cursos</h1>
+        <h1 class="titulo-pag-cursos">Cursos</h1>
 
         <h2>Mis cursos</h2>
         <div class="mis-cursos">
@@ -129,7 +129,7 @@ function cargarCursos() {
             </div>
         </div>
 
-        <hr class="separador-seccion">
+        <hr class="separador-seccion-cursos">
 
         <h2>Todos los cursos</h2>
         <div class="todos-cursos">
@@ -165,18 +165,18 @@ function cargarCursos() {
     </div>
     `;
 
-  /* mensaje cuando se hace click en el boton */
-  const botones = contenedor.querySelectorAll(".btn-curso");
+    /* mensaje cuando se hace click en el boton */
+    const botones = contenedor.querySelectorAll(".btn-curso");
 
-  botones.forEach((boton) => {
-    boton.addEventListener("click", () => {
-      alert("Este curso no esta disponible actualmente");
+    botones.forEach((boton) => {
+        boton.addEventListener("click", () => {
+        alert("Este curso no esta disponible actualmente");
+        });
     });
-  });
 }
 
 function cargarContacto() {
-  contenedor.innerHTML = `
+contenedor.innerHTML = `
         <section class="seccion-contacto">
             <h1 class="titulo-contacto">Contactanos</h1>
             
@@ -188,6 +188,7 @@ function cargarContacto() {
                     <h3>Atencion Presencial</h3>
                     <p>11 de abril 461</p>
                     <p>Oficina 3, Primer Piso</p>
+                    <p>Horario: Lunes a viernes de 8:00 - 18:00</p>
                 </article>
 
                 <article class="card-contacto">
@@ -204,14 +205,15 @@ function cargarContacto() {
 }
 
 function cargarPerfil() {
+    //Selectores para futuras funcionalidades 
   // const inputNombre = document.querySelector('#input-nombre').value;
   // const inputEmail = document.querySelector('#email').value;
 
-  contenedor.innerHTML = `
+contenedor.innerHTML = `
         <section class = "seccion-perfil">
-            <h1 class = "titulo-perfil"> Mi perfil académico</h1> <div class= "perfil-card"> 
-
-            <div class = "perfil-layout">
+            <h1 class = "titulo-perfil"> Mi perfil académico</h1> 
+        
+            <div class= "perfil-card"> 
                 <div class = "card-estilo-base perfil-card">
                     <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
 
@@ -221,7 +223,7 @@ function cargarPerfil() {
                     <p><strong>Teléfono: </strong>+54 291 123-4567</p>
                 </div>
 
-            <hr class = "separador-seccion">
+                <hr class = "separador-seccion">
 
                 <div class="card-estilo-base perfil-cursos-contenedor">
                     <h3 class ="titulo-cursos"><strong>Cursos inscriptos: </strong></h3>
@@ -232,13 +234,13 @@ function cargarPerfil() {
                             <li>Inglés 2</li>
                         </ul>
                 </div>
-            </div>
+        </div>
         </section>    
     `;
 }
 
 function cargarProfesores() {
-  contenedor.innerHTML = `
+contenedor.innerHTML = `
     <section class = "seccion-profesores">
         
         <h1 class = "titulo-profesores">PROFESORES</h1>
@@ -349,7 +351,7 @@ function cargarProfesores() {
 }
 
 function cargarLogin() {
-  contenedor.innerHTML = `
+contenedor.innerHTML = `
     <section class="seccion-login">
         <h1 class="titulo-login">Iniciar Sesión</h1>
     
@@ -381,44 +383,44 @@ function cargarLogin() {
 
 // define una funcion que recibe el nombre de la seccion y usa un switch para ejecutar la funcion de carga correspondiente
 function navegar(seccion) {
-  /* selecciona todos los obejtos con clase .inicio-link y les quita la clase "activo" si es que la tienen*/
-  document.querySelectorAll(".inicio-link").forEach((link) => {
+    /* selecciona todos los obejtos con clase .inicio-link y les quita la clase "activo" si es que la tienen*/
+    document.querySelectorAll(".inicio-link").forEach((link) => {
     link.classList.remove("activo");
-  });
+    });
 
-  /* agrega clase "activo" dependiendo la pagina que cargue */
-  const linkActivo = document.querySelector(`.pag-${seccion}`);
-  if (linkActivo) {
+    /* agrega clase "activo" dependiendo la pagina que cargue */
+    const linkActivo = document.querySelector(`.pag-${seccion}`);
+    if (linkActivo) {
     linkActivo.classList.add("activo");
-  }
+    }
 
-  switch (seccion) {
-    case "inicio":
-      cargarInicio();
-      break;
-    case "cursos":
-      cargarCursos();
-      break;
-    case "contacto":
-      cargarContacto();
-      break;
-    case "perfil":
-      cargarPerfil();
-      break;
-    case "profesores":
-      cargarProfesores();
-      break;
-    case "login":
-      cargarLogin();
-      break;
-    default:
-      contenedor.innerHTML = "<h1>Error 404</h1>";
-  }
+    switch (seccion) {
+        case "inicio":
+            cargarInicio();
+            break;
+        case "cursos":
+            cargarCursos();
+            break;
+        case "contacto":
+        cargarContacto();
+        break;
+        case "perfil":
+            cargarPerfil();
+            break;
+        case "profesores":
+            cargarProfesores();
+            break;
+        case "login":
+            cargarLogin();
+            break;
+        default:
+        contenedor.innerHTML = "<h1>Error 404</h1>";
+    }
 }
 
 // define una funcion para alternar menu, le agrega o quita la clase "cerrado" al body
 function alternarMenu() {
-  document.body.classList.toggle("cerrado");
+    document.body.classList.toggle("cerrado");
 }
 
 /* agrega un evento al hacer click en  el boton seleccionado anteriormente,
