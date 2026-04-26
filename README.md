@@ -32,7 +32,7 @@ Para el cambio de vistas, centralizamos toda la lógica en la función `navegar(
 📂 /
  ┣ 📂 assets/ 
  ┃  ┣ 📂 img/          # Imágenes estáticas
- ┃  ┗ 📂 favicon /     # Favicon de la pagina
+ ┃  ┗ 📂 favicon/      # Favicon de la pagina
  ┣ 📂 css/             # Estilos generales
  ┃  ┗ 📂 componentes/  # Componentes
  ┣ 📂 js/              # Scripts principales (navegación, interactividad)
