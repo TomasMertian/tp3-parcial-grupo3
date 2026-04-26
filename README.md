@@ -447,7 +447,7 @@ body.cerrado .inicio .inicio-link.activo {
 
 Cuando el menú está cerrado **y** un enlace tiene la clase `activo` al mismo tiempo, se le reduce la opacidad al 60%. Esto evita que el fondo de color del enlace seleccionado se vea demasiado cargado en un menú tan angosto, manteniendo una apariencia visual equilibrada.
 
-## Estilos del footer (CSS)
+### Estilos del footer (CSS)
  
 ```css
 .footer {
