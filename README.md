@@ -508,3 +508,113 @@ El diseño utiliza el modelo de **Flexbox** para organizar los elementos.
 Para que la interfaz sea un poco más interactiva incorpore algunos efectos visuales.
 
 - *Transiciones de Elevación y Desplazamiento:* A las tarjetas les asigne la propiedad `transition: transform 0.3s ease`. Lo que hace es que al interactuar con ellas (`:hover`), se mueven hacia arriba (`translateY`). Y por otro lado a los ítems de las listas les puse un desplazamiento lateral (`translateX`).
+
+---
+
+
+# Surop Maitena 
+# Seccion "Profesores":
+
+## Descripción de la Funcionalidad
+
+La función `cargarProfesores()` carga y muestra en la página una sección con información de profesores y ayudantes. Inserta tarjetas con sus datos (nombre, materia, email y horario) dentro de un contenedor del DOM, permitiendo visualizar y contactar a cada uno.
+
+---
+
+contenedor.innerHTML = `...`;
+Se utiliza `contenedor.innerHTML` para insertar dinámicamente una sección HTML que contiene los títulos y la estructura base de la vista de profesores.
+
+```
+contenedor.innerHTML = `
+    <section class = "seccion-profesores">
+        
+        <h1 class = "titulo-profesores">PROFESORES</h1>
+        <h2> MIS PROFESORES</h2>
+```
+
+La estructura del contenido se organiza mediante un contenedor `<section>` que agrupa la sección de profesores. Dentro de este, se incluyen un título principal (`<h1>`) y un subtítulo (`<h2>`), estableciendo una jerarquía clara de la información.
+
+---
+
+## Estructura de datos
+
+``
+ <div class = "profesores-container">
+
+            <article class = "profesor-card">
+                <h3>Gustavo Ramoscelli</h3>
+                <p class="materia">Materia: Programacion 3</p>
+                <p>Mail: gustavoramoscelli@gmail.com</p>
+                <p>Horario: Lunes y miercoles de 18 a 22 </p>
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=gustavoramoscelli@gmail.com" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar
+                </a>
+```
+
+Cada profesor se representa mediante una tarjeta (`article`) que contiene su información principal: nombre, materia, correo electrónico y horario. Además, incluye un botón de contacto que redirige al cliente de correo (Gmail) con el destinatario predefinido. Estas tarjetas se agrupan dentro de un contenedor (`div`) que permite organizar su distribución visual.
+        
+
+```
+<hr class="separador-seccion">
+```
+
+Se utiliza el elemento `<hr>` con la clase `separador-seccion` para dividir visualmente las secciones de profesores y ayudantes, mejorando la organización y legibilidad del contenido.
+
+---
+
+## **Funcionalidades Específicas de la Tarjeta**
+
+``
+ <p class="materia">Materia: Programacion 3</p>
+ 
+ .materia {
+    font-weight: bold;
+    color: var(--text-highlight);
+}
+``
+
+Se utiliza la clase `.materia` para destacar visualmente la asignatura de cada profesor y/o ayudante. Esta decisión permite vincular la sección de profesores con la sección de cursos, facilitando la identificación de la materia correspondiente mediante énfasis visual, como el uso de negrita y colores destacados.
+
+---
+
+```jsx
+<a href = "https://mail.google.com/mail/?view=cm&fs=1&to=gustavoramoscelli@gmail.com" 
+                target="_blank"
+                class = "btn-contactar">
+                Contactar
+                </a>
+                
+                
+                
+   .btn-contactar{ 
+    background: var(--accent-light);
+    color: var(--bg-primary);
+    border: none; 
+    border-radius:8px;
+    padding: 8px 16px; 
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; 
+    cursor: pointer;
+    width: 75%; 
+    margin-top: auto; 
+    transition: 0.3s ease; 
+ }
+
+.btn-contactar:hover {
+    background-color: var(--text-highlight); 
+    transform: translateY(-2px); 
+}
+```
+
+El parámetro `to` dentro de la URL permite cargar automáticamente el destinatario del correo electrónico, evitando que el usuario tenga que ingresar la dirección manualmente.
+
+El atributo `target="_blank"` permite abrir el enlace en una nueva pestaña del navegador, evitando que el usuario pierda la página actual.
+
+La clase `.btn-contactar`  se utiliza para estilizar el enlace de contacto como un botón interactivo. Se aplican propiedades de diseño como color de fondo, tipografía destacada, espaciado interno y bordes redondeados.  Además, se incorpora un efecto `hover` que modifica el color y genera un leve desplazamiento, mejorando la experiencia visual del usuario.
+
+El enlace de contacto permite al alumno comunicarse directamente con el docente en caso de tener una consulta. En caso de no disponer previamente del correo electrónico, el sistema ya lo proporciona dentro de la tarjeta.
+
+Al seleccionar el botón "Contactar", el usuario es redirigido automáticamente a Gmail en una nueva pestaña, con la dirección del destinatario ya cargada, facilitando así el envío del mensaje.
