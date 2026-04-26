@@ -447,6 +447,45 @@ body.cerrado .inicio .inicio-link.activo {
 
 Cuando el menú está cerrado **y** un enlace tiene la clase `activo` al mismo tiempo, se le reduce la opacidad al 60%. Esto evita que el fondo de color del enlace seleccionado se vea demasiado cargado en un menú tan angosto, manteniendo una apariencia visual equilibrada.
 
+### Estilos del footer (CSS)
+ 
+```css
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 240px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: var(--bg-secondary);
+    color: var(--text-highlight);
+    font-size: 14px;
+    transition: left 0.5s ease;
+    z-index: 10;
+}
+```
+ 
+Al footer le puse `position: fixed` para que quede anclado en la parte inferior de la pantalla en todo momento. 
+
+El `left: 240px` lo posiciona justo donde termina el menú abierto, y `right: 0` lo estira hasta el borde derecho.
+ 
+Use `display: flex` con `align-items: center` y `justify-content: center` para centrar el contenido dentro de su altura fija de 40px. Para los colores, use la paleta definida en el `:root`, manteniendo coherencia con el resto de la pagina.
+ 
+El `z-index: 10` asegura que el footer quede siempre por encima del contenido de las secciones.
+La `transition: left 0.5s ease` lo sincroniza con la animación del menú lateral, para que ambos se muevan juntos.
+ 
+---
+ 
+```css
+body.cerrado .footer {
+    left: 56px;
+}
+```
+ 
+Cuando el `body` tiene la clase `cerrado`, reduje el `left` a 56px para que el footer acompañe el achicamiento del menú, igual que el `padding-left` del body y el ancho del `.menu-desplegable`.
+
 ## Integrante: Ariadna Lavizzari:
 
 ### Sección "Perfil"
