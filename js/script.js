@@ -234,7 +234,7 @@ contenedor.innerHTML = `
                             <li>Inglés 2</li>
                         </ul>
                 </div>
-        </div>
+            </div>
         </section>    
     `;
 }
