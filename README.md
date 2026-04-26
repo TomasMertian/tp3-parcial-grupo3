@@ -41,13 +41,13 @@ Para el cambio de vistas, centralizamos toda la lógica en la función `navegar(
 
 ## 👥 Integrantes y Contribuciones - Grupo 3
 
-## Documentación por Renata Turani, Ariadna Lavizzari y Maitena G. Surop
+### Documentación por Renata Turani, Ariadna Lavizzari y Maitena G. Surop
 
 Nos encargamos de armar la estructura base de los archivos index.html y index.css y desarrollamos la interfaz visual del menú desplegable (sin la funcionalidad interactiva).
 
 ---
 
-## Menú desplegable
+### Menú desplegable
 
 Para el menú desplegable o barra de navegación implementamos las siguientes funcionalidades:
 
