@@ -30,9 +30,11 @@ Para el cambio de vistas, centralizamos toda la lógica en la función `navegar(
 
 ```text
 📂 /
+ ┣ 📂 assets/ 
+ ┃  ┣ 📂 img/          # Imágenes estáticas
+ ┃  ┗ 📂 favicon /     # Favicon de la pagina
  ┣ 📂 css/             # Estilos generales
- ┃ ┗ 📂 componentes/   # Componentes
- ┃    ┗ 📂 img/        # Imágenes estáticas
+ ┃  ┗ 📂 componentes/  # Componentes
  ┣ 📂 js/              # Scripts principales (navegación, interactividad)
  ┗ 📜 index.html       # Archivo principal (Contenedor SPA)
 ```
@@ -445,7 +447,7 @@ body.cerrado .inicio .inicio-link.activo {
 
 Cuando el menú está cerrado **y** un enlace tiene la clase `activo` al mismo tiempo, se le reduce la opacidad al 60%. Esto evita que el fondo de color del enlace seleccionado se vea demasiado cargado en un menú tan angosto, manteniendo una apariencia visual equilibrada.
 
-## Ariadna Lavizzari:
+## Integrante: Ariadna Lavizzari:
 
 ### Sección "Perfil"
 
@@ -546,11 +548,11 @@ Para que la interfaz sea un poco más interactiva incorpore algunos efectos visu
 
 ---
 
-# Surop Maitena
+## Integrante: Surop Maitena
 
-# Seccion "Profesores":
+### Seccion "Profesores":
 
-## Descripción de la Funcionalidad
+### Descripción de la Funcionalidad
 
 La función `cargarProfesores()` carga y muestra en la página una sección con información de profesores y ayudantes. Inserta tarjetas con sus datos (nombre, materia, email y horario) dentro de un contenedor del DOM, permitiendo visualizar y contactar a cada uno.
 
@@ -559,7 +561,7 @@ La función `cargarProfesores()` carga y muestra en la página una sección con 
 contenedor.innerHTML = `...`;
 Se utiliza `contenedor.innerHTML` para insertar dinámicamente una sección HTML que contiene los títulos y la estructura base de la vista de profesores.
 
-```
+``` js
 contenedor.innerHTML = `
     <section class = "seccion-profesores">
 
@@ -573,7 +575,7 @@ La estructura del contenido se organiza mediante un contenedor `<section>` que a
 
 ## Estructura de datos
 
-``
+```html
 
  <div class = "profesores-container">
 
@@ -593,8 +595,7 @@ La estructura del contenido se organiza mediante un contenedor `<section>` que a
 Cada profesor se representa mediante una tarjeta (`article`) que contiene su información principal: nombre, materia, correo electrónico y horario. Además, incluye un botón de contacto que redirige al cliente de correo (Gmail) con el destinatario predefinido. Estas tarjetas se agrupan dentro de un contenedor (`div`) que permite organizar su distribución visual.
        
 
-```
-
+``` html
 <hr class="separador-seccion">
 ```
 
@@ -604,29 +605,31 @@ Se utiliza el elemento `<hr>` con la clase `separador-seccion` para dividir visu
 
 ## **Funcionalidades Específicas de la Tarjeta**
 
-``
+```html
 
  <p class="materia">Materia: Programacion 3</p>
- 
+ ```
+
+```css
  .materia {
     font-weight: bold;
     color: var(--text-highlight);
 }
-``
+```
 
 Se utiliza la clase `.materia` para destacar visualmente la asignatura de cada profesor y/o ayudante. Esta decisión permite vincular la sección de profesores con la sección de cursos, facilitando la identificación de la materia correspondiente mediante énfasis visual, como el uso de negrita y colores destacados.
 
 ---
 
-```jsx
+```js
 <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=gustavoramoscelli@gmail.com"
                 target="_blank"
                 class = "btn-contactar">
                 Contactar
                 </a>
+```
 
-
-
+```css
    .btn-contactar{
     background: var(--accent-light);
     color: var(--bg-primary);
