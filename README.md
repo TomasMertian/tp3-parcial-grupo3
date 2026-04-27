@@ -837,32 +837,32 @@ El cronograma está compuesto por 12 tarjetas, una por mes, generadas directamen
 ### Interconexión con otras secciones — Eventos internos
 Una parte clave de cargarInicio() ocurre después de inyectar el HTML. Los enlaces del contenido (#seccion-cursos, #seccion-contacto, etc.) son elementos generados dinámicamente, por lo que no existen en el DOM al momento de arrancar el script. Una vez que el HTML ya fue insertado, se los selecciona dentro del contenedor y se les asigna un evento de click individual:
 ```js
-const linkCursos = contenedor.querySelector("#seccion-cursos");
-linkCursos.addEventListener("click", (e) => {
+const linkCursosInicio = contenedor.querySelector("#seccion-cursos");
+linkCursosInicio.addEventListener("click", (e) => {
     e.preventDefault();
     navegar("cursos");
 });
 
-const linkContacto = contenedor.querySelector("#seccion-contacto");
-linkContacto.addEventListener("click", (e) => {
+const linkContactoInicio = contenedor.querySelector("#seccion-contacto");
+linkContactoInicio.addEventListener("click", (e) => {
     e.preventDefault();
     navegar("contacto");
 });
 
-const linkLogin = contenedor.querySelector("#seccion-login");
-linkLogin.addEventListener("click", (e) => {
+const linkLoginInicio = contenedor.querySelector("#seccion-login");
+linkLoginInicio.addEventListener("click", (e) => {
     e.preventDefault();
     navegar("login");
 });
 
-const linkProfesores = contenedor.querySelector("#seccion-profesores");
-linkProfesores.addEventListener("click", (e) => {
+const linkProfesoresInicio = contenedor.querySelector("#seccion-profesores");
+linkProfesoresInicio.addEventListener("click", (e) => {
     e.preventDefault();
     navegar("profesores");
 });
 
-const linkPerfil = contenedor.querySelector("#seccion-perfil");
-linkPerfil.addEventListener("click", (e) => {
+const linkPerfilInicio = contenedor.querySelector("#seccion-perfil");
+linkPerfilInicio.addEventListener("click", (e) => {
     e.preventDefault();
     navegar("perfil");
 });
