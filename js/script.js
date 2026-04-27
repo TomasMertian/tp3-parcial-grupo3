@@ -4,7 +4,7 @@ const menu = document.querySelector(".menu-desplegable");
 // crea una variable llamada boton, y agarra elemento con clase .menu-boton del html
 const boton = document.querySelector(".menu-boton");
 
-// crea una variable llamada boton, y agarra elemento con clase contenedor-principal del html
+// crea una variable llamada contenedor, y agarra elemento con clase contenedor-principal del html
 const contenedor = document.getElementById("contenedor-principal");
 
 // crea variables para cada enlace del menu, agarrando los elementos por su clase del html
@@ -22,7 +22,7 @@ contenedor.innerHTML = `
         <h1 class="titulo-inicio">Bienvenido</h1>
         <p class="parrafo-inicio">Le damos la bienvenida al aula virtual de la Universidad Nacional</p>
         <div class="imagenes-container">
-            <img src="./css/componentes/img/925547ab210b12e869b3f331e63b54f3.jpg" alt="imagen-estudio" class="imagen-estudio">
+            <img src="./assets/img/925547ab210b12e869b3f331e63b54f3.jpg" alt="imagen-estudio" class="imagen-estudio">
         </div>
         <p class="speech-informativo">Bienvenidos al portal de alumnos. Acá vas a encontrar toda la información sobre las mesas de exámenes, fechas administrativas y el cronograma de la Universidad.</p>
         <h1 class ="header-cronograma"> CRONOGRAMA TENTATIVO AÑO CURRICULAR</h1>
@@ -215,7 +215,7 @@ contenedor.innerHTML = `
         
             <div class= "perfil-card"> 
                 <div class = "card-estilo-base perfil-card">
-                    <img src = "./css/componentes/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
+                    <img src = "./assets/img/foto perfil.webp" alt ="Foto de perfil" class ="foto-usuario">
 
                     <h2><strong>Nombre: </strong>Ariadna</h2>
                     <h2><strong>Apellido: </strong>Lavizzari</h2>
@@ -234,7 +234,7 @@ contenedor.innerHTML = `
                             <li>Inglés 2</li>
                         </ul>
                 </div>
-        </div>
+            </div>
         </section>    
     `;
 }

@@ -1,11 +1,13 @@
 # Trabajo practico Nro 3 | Grupo 3
 
 ## 📌 Descripción del Proyecto
+
 Aula virtual desarrollada como SPA (Single Page Application) con HTML, CSS y JavaScript vanilla. Simula el aula virtual de una universidad, permitiendo al alumno navegar entre secciones sin recargar la página.
 
 ## 🚀 Tecnologías Utilizadas
-* **Frontend:** HTML5, CSS3, Vanilla JavaScript
-* **Herramientas:** Git, GitHub
+
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript
+- **Herramientas:** Git, GitHub
 
 ## 💡 Cómo pensamos el proyecto
 
@@ -19,30 +21,33 @@ Para el cambio de vistas, centralizamos toda la lógica en la función `navegar(
 
 ## 🏗️ Arquitectura y Lógica de Navegación (JavaScript)
 
-* **Inyección Dinámica:** El contenido de cada sección se carga dentro del `#contenedor-principal` mediante funciones específicas `cargarPagina()`.
-* **Ruteo Centralizado:** La función `navegar(seccion)` utiliza un `switch` para renderizar la vista solicitada y actualiza visualmente la pestaña activa en el menú.
-* **Menú Colapsable:** Un evento alterna la clase `.cerrado` en el `body` para desplegar o retraer el menú lateral.
-* **Modularidad (Flujo de trabajo):** La separación en funciones independientes permite que los distintos miembros del equipo editen el HTML de su sección asignada sin generar conflictos de código.
+- **Inyección Dinámica:** El contenido de cada sección se carga dentro del `#contenedor-principal` mediante funciones específicas `cargarPagina()`.
+- **Ruteo Centralizado:** La función `navegar(seccion)` utiliza un `switch` para renderizar la vista solicitada y actualiza visualmente la pestaña activa en el menú.
+- **Menú Colapsable:** Un evento alterna la clase `.cerrado` en el `body` para desplegar o retraer el menú lateral.
+- **Modularidad (Flujo de trabajo):** La separación en funciones independientes permite que los distintos miembros del equipo editen el HTML de su sección asignada sin generar conflictos de código.
 
 ## 📁 Estructura del Repositorio
+
 ```text
 📂 /
+ ┣ 📂 assets/ 
+ ┃  ┣ 📂 img/          # Imágenes estáticas
+ ┃  ┗ 📂 favicon/      # Favicon de la pagina
  ┣ 📂 css/             # Estilos generales
- ┃ ┗ 📂 componentes/   # Componentes
- ┃    ┗ 📂 img/        # Imágenes estáticas
+ ┃  ┗ 📂 componentes/  # Componentes
  ┣ 📂 js/              # Scripts principales (navegación, interactividad)
  ┗ 📜 index.html       # Archivo principal (Contenedor SPA)
 ```
 
- ## 👥 Integrantes y Contribuciones - Grupo 3
+## 👥 Integrantes y Contribuciones - Grupo 3
 
-## Documentación por Renata Turani, Ariadna Lavizzari y Maitena G. Surop
+### Documentación por Renata Turani, Ariadna Lavizzari y Maitena G. Surop
 
 Nos encargamos de armar la estructura base de los archivos index.html y index.css y desarrollamos la interfaz visual del menú desplegable (sin la funcionalidad interactiva).
 
 ---
 
-## Menú desplegable
+### Menú desplegable
 
 Para el menú desplegable o barra de navegación implementamos las siguientes funcionalidades:
 
@@ -50,11 +55,11 @@ Usamos transiciones en el archivo index.css (0.5s) para que, cuando que a la hor
 
 ```css
 .menu-desplegable {
-    transition: width 0.5s ease;
+  transition: width 0.5s ease;
 }
 
 body {
-    transition: padding-left 0.5s ease;
+  transition: padding-left 0.5s ease;
 }
 ```
 
@@ -62,12 +67,12 @@ Armamos links directos para las secciones de la página: inicio, cursos, contact
 
 ```html
 <ul class="inicio">
-    <li class="item-inicio">
-        <a href="#" class="inicio-link pag-inicio">
-        <i class="bx bx-home"></i>
-        <h4>Inicio</h4>
-        </a>
-    </li>
+  <li class="item-inicio">
+    <a href="#" class="inicio-link pag-inicio">
+      <i class="bx bx-home"></i>
+      <h4>Inicio</h4>
+    </a>
+  </li>
 </ul>
 ```
 
@@ -75,12 +80,12 @@ Creamos un botón circular (.menu-boton) que se posiciona en el borde del menú.
 
 ```css
 .menu-boton {
-    position: absolute;
-    top: 3.5%;
-    right: -14px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
+  position: absolute;
+  top: 3.5%;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
 }
 ```
 
@@ -88,20 +93,22 @@ En cuanto a los efectos visuales, hicimos una funcionalidad para que cuando el u
 
 ```css
 .inicio .inicio-link:hover {
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
 ```
 
 ---
+
 ### Desarrollo técnico
+
 ### Estructura con HTML
 
 Para los botones de navegación utilizamos una lista `(<ul> y <li>)`. Decidimos desarrollarlo así ya que es la mejor forma de organizar enlaces.
 
 ```html
 <ul>
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Cursos</a></li>
+  <li><a href="#">Inicio</a></li>
+  <li><a href="#">Cursos</a></li>
 </ul>
 ```
 
@@ -115,19 +122,20 @@ Utilizamos display: flex para alinear. Nos permitió centrar los iconos con el t
 
 ```css
 .menu-desplegable {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 ```
+
 ### Posicionamiento
 
 Al menú le pusimos `position: fixed` para que la navegación permanezca anclada a la izquierda siempre
 
 ```css
 .menu-desplegable {
-    position: fixed;
-    left: 0;
+  position: fixed;
+  left: 0;
 }
 ```
 
@@ -135,8 +143,8 @@ Al botón le pusimos `position: absolute` para ubicarlo justo en el borde del me
 
 ```css
 .menu-boton {
-    position: absolute;
-    right: -14px;
+  position: absolute;
+  right: -14px;
 }
 ```
 
@@ -144,11 +152,12 @@ Implementamos un `padding-left: 240px` en el body. Ya que como el menú está "f
 
 ```css
 body {
-    padding-left: 240px;
+  padding-left: 240px;
 }
 ```
 
 ## Integrante: Renata Turani
+
 ### Sección “Contacto”
 
 El objetivo de esta sección es brindar al usuario la información de contacto de la institución UTN FRBB. Opte por una interfaz dividida en dos partes: la atención presencial y la atención virtual.
@@ -161,13 +170,14 @@ Para desarrollar esta sección, implemente HTML a través de DOM
 
 ```js
 // seleccion del contenedor principal desde el DOM
-const contenedor = document.getElementById('contenedor-principal');
+const contenedor = document.getElementById("contenedor-principal");
 ```
+
 `Función cargarContacto():` Al ejecutarse, accede al objeto contenedor (el `<main>` principal) y con la propiedad .innerHTML reemplaza cualquier contenido previo (el contenido de otra sección seleccionada) por el contenido de la sección “contacto”.
 
 ```js
 function cargarContacto() {
-contenedor.innerHTML = `
+  contenedor.innerHTML = `
         <section class="seccion-contacto">
             <h1 class="titulo-contacto">Contactanos</h1>
         </section>
@@ -179,15 +189,15 @@ Cuando el usuario hace clic en el botón “Contacto”, se ejecuta una estructu
 
 ```js
 function navegar(seccion) {
-    switch (seccion) {
-        case 'contacto':
-            cargarContacto();
-            break;
-    }
+  switch (seccion) {
+    case "contacto":
+      cargarContacto();
+      break;
+  }
 }
 
 // evento click en el link contacto
-linkContacto.addEventListener('click', () => navegar('contacto'));
+linkContacto.addEventListener("click", () => navegar("contacto"));
 ```
 
 ---
@@ -200,8 +210,8 @@ Utilice flexbox. En el contenedor principal `(.cards-container)` use display: fl
 
 ```css
 .cards-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 ```
 
@@ -211,12 +221,14 @@ Cada bloque de información se estructuró como una "card". Les asigné un `min-
 
 ```css
 .card-contacto {
-    min-width: 280px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+  min-width: 280px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .card-contacto:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 ```
 
@@ -231,18 +243,20 @@ y nuevamente, implemente la librería Boxicons para usar iconos representativos 
 ```js
 const menu = document.querySelector(".menu-desplegable");
 const boton = document.querySelector(".menu-boton");
-const contenedor = document.getElementById('contenedor-principal');
+const contenedor = document.getElementById("contenedor-principal");
 ```
+
 Se seleccionan del DOM los elementos principales: el menú desplegable, el botón para abrirlo/cerrarlo, y el contenedor donde se inyecta el contenido de cada sección.
 
 ```js
-const linkInicio = document.querySelector('.pag-inicio');
-const linkCursos = document.querySelector('.pag-cursos');
-const linkContacto = document.querySelector('.pag-contacto');
-const linkPerfil = document.querySelector('.pag-perfil');
-const linkProfesores = document.querySelector('.pag-profesores');
-const linkLogin = document.querySelector('.pag-login');
+const linkInicio = document.querySelector(".pag-inicio");
+const linkCursos = document.querySelector(".pag-cursos");
+const linkContacto = document.querySelector(".pag-contacto");
+const linkPerfil = document.querySelector(".pag-perfil");
+const linkProfesores = document.querySelector(".pag-profesores");
+const linkLogin = document.querySelector(".pag-login");
 ```
+
 Se seleccionan los seis enlaces del menú de navegación, cada uno identificado por su clase CSS correspondiente.
 
 ---
@@ -252,21 +266,24 @@ Se seleccionan los seis enlaces del menú de navegación, cada uno identificado 
 ```js
 function navegar(seccion) {
 ```
+
 Recibe como parámetro un string con el nombre de la sección a la que se quiere ir.
 
 ```js
-    document.querySelectorAll(".inicio-link").forEach(link => {
-        link.classList.remove("activo");
-    });
+document.querySelectorAll(".inicio-link").forEach((link) => {
+  link.classList.remove("activo");
+});
 ```
+
 Recorre todos los enlaces del menú y les quita la clase `activo`, limpiando el estado visual anterior.
 
 ```js
-    const linkActivo = document.querySelector(`.pag-${seccion}`);
-    if (linkActivo) {
-        linkActivo.classList.add("activo");
-    }
+const linkActivo = document.querySelector(`.pag-${seccion}`);
+if (linkActivo) {
+  linkActivo.classList.add("activo");
+}
 ```
+
 Busca el enlace correspondiente a la sección recibida y, si existe, le agrega la clase `activo` para resaltarlo visualmente en el menú.
 
 ```js
@@ -294,6 +311,7 @@ Busca el enlace correspondiente a la sección recibida y, si existe, le agrega l
     }
 }
 ```
+
 Usa un `switch` para llamar a la función de carga que corresponde según la sección. Si el valor no coincide con ningún caso conocido, muestra un mensaje de error 404.
 
 ---
@@ -302,9 +320,10 @@ Usa un `switch` para llamar a la función de carga que corresponde según la sec
 
 ```js
 function cargarCursos() {
-    contenedor.innerHTML = `...`
+  contenedor.innerHTML = `...`;
 }
 ```
+
 Inyecta el HTML de la sección cursos dentro del `#contenedor-principal`. El contenido se divide en dos bloques: **Mis cursos** (las materias en las que el alumno está inscripto) y **Todos los cursos** (la oferta completa de la carrera). Cada curso se muestra como una card con nombre, horario, profesor, ayudante y un botón.
 
 El HTML inyectado tiene esta estructura:
@@ -318,15 +337,17 @@ El HTML inyectado tiene esta estructura:
 ```js
 const botones = contenedor.querySelectorAll(".btn-curso");
 ```
+
 Una vez inyectado el HTML, selecciona todos los botones "Ver curso" que existen dentro del contenedor.
 
 ```js
 botones.forEach((boton) => {
-    boton.addEventListener("click", () => {
-        alert("Este curso no esta disponible actualmente");
-    });
+  boton.addEventListener("click", () => {
+    alert("Este curso no esta disponible actualmente");
+  });
 });
 ```
+
 Recorre cada botón y le agrega un listener. Al hacer click, muestra un `alert` indicando que el curso no está disponible. Esto se hace después de inyectar el HTML porque antes de que `cargarCursos()` se ejecute, esos botones no existen en el DOM y no podrían ser seleccionados.
 
 ---
@@ -335,9 +356,10 @@ Recorre cada botón y le agrega un listener. Al hacer click, muestra un `alert` 
 
 ```js
 function alternarMenu() {
-    document.body.classList.toggle("cerrado");
+  document.body.classList.toggle("cerrado");
 }
 ```
+
 Agrega o quita la clase `cerrado` del `<body>`. Esto permite abrir y cerrar el menú lateral mediante CSS, sin necesidad de manipular estilos directamente desde JavaScript.
 
 ---
@@ -347,21 +369,24 @@ Agrega o quita la clase `cerrado` del `<body>`. Esto permite abrir y cerrar el m
 ```js
 boton.addEventListener("click", alternarMenu);
 ```
+
 Escucha el click sobre el botón del menú y llama a `alternarMenu` cada vez que se hace click.
 
 ```js
-linkInicio.addEventListener('click',     () => navegar('inicio'));
-linkCursos.addEventListener('click',     () => navegar('cursos'));
-linkContacto.addEventListener('click',   () => navegar('contacto'));
-linkPerfil.addEventListener('click',     () => navegar('perfil'));
-linkProfesores.addEventListener('click', () => navegar('profesores'));
-linkLogin.addEventListener('click',      () => navegar('login'));
+linkInicio.addEventListener("click", () => navegar("inicio"));
+linkCursos.addEventListener("click", () => navegar("cursos"));
+linkContacto.addEventListener("click", () => navegar("contacto"));
+linkPerfil.addEventListener("click", () => navegar("perfil"));
+linkProfesores.addEventListener("click", () => navegar("profesores"));
+linkLogin.addEventListener("click", () => navegar("login"));
 ```
+
 Cada enlace del menú tiene un listener que, al hacer click, llama a `navegar()` pasando el nombre de la sección correspondiente como string.
 
 ```js
-navegar('inicio');
+navegar("inicio");
 ```
+
 Al cargar el script por primera vez, se llama directamente a `navegar('inicio')` para que la página de inicio sea la vista por defecto.
 
 ---
@@ -370,55 +395,99 @@ Al cargar el script por primera vez, se llama directamente a `navegar('inicio')`
 
 ```css
 .inicio .inicio-link.activo {
-    background-color: var(--accent-dark); 
-    color: var(--text-highlight);      
+  background-color: var(--accent-dark);
+  color: var(--text-highlight);
 }
 ```
+
 Resalta visualmente el enlace del menú correspondiente a la página activa. Cuando un enlace tiene la clase `activo`, se le aplica un color de fondo y de texto definidos por variables CSS, indicando al usuario en qué sección se encuentra.
 
 ```css
 body.cerrado {
-    padding-left: 56px;
+  padding-left: 56px;
 }
 ```
+
 Cuando el `body` tiene la clase `cerrado`, el padding izquierdo se reduce a 56px para que el contenido acompañe el achicamiento del menú.
 
 ```css
 body.cerrado .menu-desplegable {
-    width: 56px;
-    padding-left: 0;
-    padding-right: 0;
+  width: 56px;
+  padding-left: 0;
+  padding-right: 0;
 }
 ```
+
 El menú lateral reduce su ancho a 56px y elimina el padding horizontal, quedando del tamaño justo para mostrar solo los iconos.
 
 ```css
 body.cerrado .titulo h4,
 body.cerrado .inicio-link h4 {
-    display: none;
+  display: none;
 }
 ```
+
 Oculta los textos de los enlaces y el título del menú cuando está cerrado, dejando visibles únicamente los iconos.
 
 ```css
 body.cerrado .inicio-link {
-    justify-content: center;
-    height: 40px;
-    width: 100%;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
 }
 ```
+
 Centra los iconos horizontalmente dentro de su contenedor y les fija un alto de 40px para mantener una apariencia uniforme con el menú colapsado.
 
 ```css
 body.cerrado .inicio .inicio-link.activo {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 ```
+
 Cuando el menú está cerrado **y** un enlace tiene la clase `activo` al mismo tiempo, se le reduce la opacidad al 60%. Esto evita que el fondo de color del enlace seleccionado se vea demasiado cargado en un menú tan angosto, manteniendo una apariencia visual equilibrada.
 
+### Estilos del footer (CSS)
+ 
+```css
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 240px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: var(--bg-secondary);
+    color: var(--text-highlight);
+    font-size: 14px;
+    transition: left 0.5s ease;
+    z-index: 10;
+}
+```
+ 
+Al footer le puse `position: fixed` para que quede anclado en la parte inferior de la pantalla en todo momento. 
 
+El `left: 240px` lo posiciona justo donde termina el menú abierto, y `right: 0` lo estira hasta el borde derecho.
+ 
+Use `display: flex` con `align-items: center` y `justify-content: center` para centrar el contenido dentro de su altura fija de 40px. Para los colores, use la paleta definida en el `:root`, manteniendo coherencia con el resto de la pagina.
+ 
+El `z-index: 10` asegura que el footer quede siempre por encima del contenido de las secciones.
+La `transition: left 0.5s ease` lo sincroniza con la animación del menú lateral, para que ambos se muevan juntos.
+ 
+---
+ 
+```css
+body.cerrado .footer {
+    left: 56px;
+}
+```
+ 
+Cuando el `body` tiene la clase `cerrado`, reduje el `left` a 56px para que el footer acompañe el achicamiento del menú, igual que el `padding-left` del body y el ancho del `.menu-desplegable`.
 
-## Ariadna Lavizzari:
+## Integrante: Ariadna Lavizzari:
+
 ### Sección "Perfil"
 
 ```js
@@ -427,6 +496,7 @@ function cargarPerfil() {
   //const inputEmail = document.queryselector('#email').value;
 }
 ```
+
 La función posee estas dos líneas comentadas que utilizan `querySelector` para capturar datos del DOM. Estaba pensado que esta sección de la página en conjunto con el login sea funcional, que se pudiera loguear alguien, luego te enviara a perfil y se mostraran los datos del usuario, sin embargo luego de bastantes intentos de código esto no se pudo hacer.
 
 ---
@@ -436,15 +506,16 @@ contenedor.innerHTML = `
   <section class = "seccion-perfil">
       <h1 class = "titulo-perfil"> Mi perfil académico</h1>
 ```
+
 Utilicé la propiedad innerHTML con Template Literals (los backticks), para modelar todo el HTML de la sección, teniendo una estructura limpia, aqui esta la `<section class ="seccion-perfil">` que encapsula todo el código a continuación, es donde defino los "márgenes" principales de la página para que quede todo bien ordenado.
 Lo primero que definí fue el título de la sección utilizando la etiqueta `<h1>`.
-
 
 ---
 
 ```js
 <div class = "perfil-card">
 ```
+
 Cree una especie de contenedor principal. Esta caja es la que dirige todo el diseño, utilice Flexbox en el css para organizar las dos tarjetas que luego va a tener adentro
 
 ---
@@ -458,6 +529,7 @@ Cree una especie de contenedor principal. Esta caja es la que dirige todo el dis
   <p><strong>Teléfono: </strong>+54 9 291 123-4567</p>
 </div>
 ```
+
 Este es el primer bloque hijo. Utilicé la clase `.card-estilo-base` para poder reutilizar los mismos estilos que le defina en algún otra "caja" que se presente dentro del código, esto para no tener que volver a escribir el css más de una vez, y si lo modifico se modifica todo en conjunto.
 Dentro de este bloque están definidos los datos personales (los cuales en un principio quise que sean funcionales, es decir que tome los datos que el usuario pone en el login y luego se muestren acá) y está cargada la foto de perfil.
 
@@ -466,23 +538,27 @@ Dentro de este bloque están definidos los datos personales (los cuales en un pr
 ```js
 <hr class = "separador-seccion">
 ```
+
 Esto es simplemente una línea separadora con una clase específica. Su función es únicamente visual.
 
 ---
 
 ```js
 <div class="card-estilo-base perfil-cursos-contenedor">
-    <h3 class ="titulo-cursos"><strong>Cursos inscriptos: </strong></h3>
-    <ul class ="lista-cursos">
-        <li>Programación 3</li>
-        <li>Base de Datos 2</li>
-        <li>Metodología de Sistemas 1</li>
-        <li>Inglés 2</li>
-    </ul>
+  <h3 class="titulo-cursos">
+    <strong>Cursos inscriptos: </strong>
+  </h3>
+  <ul class="lista-cursos">
+    <li>Programación 3</li>
+    <li>Base de Datos 2</li>
+    <li>Metodología de Sistemas 1</li>
+    <li>Inglés 2</li>
+  </ul>
 </div>
 ```
+
 Este es el segundo bloque hijo, acá como se ve también esta presente el `card-estilo-base` esto como explique previamente es para poder tener el mismo estilo sin tener que repetirlo.
-Este bloque contiene la lista de las materias a las que el usuario esta inscripto (No es funcional, no te redirige a ningún lado aunque fue algo pensado). 
+Este bloque contiene la lista de las materias a las que el usuario esta inscripto (No es funcional, no te redirige a ningún lado aunque fue algo pensado).
 Use una estructura de lista desordenada `(<ul>)` para que cada curso sea un ítem independiente.
 
 ---
@@ -492,30 +568,30 @@ Use una estructura de lista desordenada `(<ul>)` para que cada curso sea un íte
 ### 1. Maquetación con Flexbox:
 
 El diseño utiliza el modelo de **Flexbox** para organizar los elementos.
-- *Encapsulamiento:* Se utilizó la clase `.perfil-card` como contenedor principal para agrupar las tarjetas.
 
-- *Jerarquía de lectura:* La estructura vertical que le dí al diseño permite que la información personal y académica se vean de una forma secuencial, lo que facilita la navegación del usuario en diferentes tamaños de pantalla.
+- _Encapsulamiento:_ Se utilizó la clase `.perfil-card` como contenedor principal para agrupar las tarjetas.
 
-- *Contenedor Base*: La clase `.seccion-perfil` actúa como el marco principal, utilice `min-height: 100vh` **(Viewport Height)** Para asegurar que el fondo cubra la totalidad de la pantalla y manteniendo el título principal centrado mediante `align-items: center`
+- _Jerarquía de lectura:_ La estructura vertical que le dí al diseño permite que la información personal y académica se vean de una forma secuencial, lo que facilita la navegación del usuario en diferentes tamaños de pantalla.
 
+- _Contenedor Base_: La clase `.seccion-perfil` actúa como el marco principal, utilice `min-height: 100vh` **(Viewport Height)** Para asegurar que el fondo cubra la totalidad de la pantalla y manteniendo el título principal centrado mediante `align-items: center`
 
 ### 2. Estética de componentes y reutilización:
 
-- *Estilo base:* La clase `.card-estilo-base` define las propiedades compartidas (*padding, bordes redondeados y sombras*), para hacer que la información personal y la lista de cursos mantengan la misma estética visual.
+- _Estilo base:_ La clase `.card-estilo-base` define las propiedades compartidas (_padding, bordes redondeados y sombras_), para hacer que la información personal y la lista de cursos mantengan la misma estética visual.
 
 ### 3. Interactividad y Experiencia de Usuario:
 
 Para que la interfaz sea un poco más interactiva incorpore algunos efectos visuales.
 
-- *Transiciones de Elevación y Desplazamiento:* A las tarjetas les asigne la propiedad `transition: transform 0.3s ease`. Lo que hace es que al interactuar con ellas (`:hover`), se mueven hacia arriba (`translateY`). Y por otro lado a los ítems de las listas les puse un desplazamiento lateral (`translateX`).
+- _Transiciones de Elevación y Desplazamiento:_ A las tarjetas les asigne la propiedad `transition: transform 0.3s ease`. Lo que hace es que al interactuar con ellas (`:hover`), se mueven hacia arriba (`translateY`). Y por otro lado a los ítems de las listas les puse un desplazamiento lateral (`translateX`).
 
 ---
 
+## Integrante: Surop Maitena
 
-# Surop Maitena 
-# Seccion "Profesores":
+### Seccion "Profesores":
 
-## Descripción de la Funcionalidad
+### Descripción de la Funcionalidad
 
 La función `cargarProfesores()` carga y muestra en la página una sección con información de profesores y ayudantes. Inserta tarjetas con sus datos (nombre, materia, email y horario) dentro de un contenedor del DOM, permitiendo visualizar y contactar a cada uno.
 
@@ -524,10 +600,10 @@ La función `cargarProfesores()` carga y muestra en la página una sección con 
 contenedor.innerHTML = `...`;
 Se utiliza `contenedor.innerHTML` para insertar dinámicamente una sección HTML que contiene los títulos y la estructura base de la vista de profesores.
 
-```
+``` js
 contenedor.innerHTML = `
     <section class = "seccion-profesores">
-        
+
         <h1 class = "titulo-profesores">PROFESORES</h1>
         <h2> MIS PROFESORES</h2>
 ```
@@ -538,7 +614,8 @@ La estructura del contenido se organiza mediante un contenedor `<section>` que a
 
 ## Estructura de datos
 
-``
+```html
+
  <div class = "profesores-container">
 
             <article class = "profesor-card">
@@ -546,17 +623,18 @@ La estructura del contenido se organiza mediante un contenedor `<section>` que a
                 <p class="materia">Materia: Programacion 3</p>
                 <p>Mail: gustavoramoscelli@gmail.com</p>
                 <p>Horario: Lunes y miercoles de 18 a 22 </p>
-                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=gustavoramoscelli@gmail.com" 
+                <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=gustavoramoscelli@gmail.com"
                 target="_blank"
                 class = "btn-contactar">
                 Contactar
                 </a>
+
 ```
 
 Cada profesor se representa mediante una tarjeta (`article`) que contiene su información principal: nombre, materia, correo electrónico y horario. Además, incluye un botón de contacto que redirige al cliente de correo (Gmail) con el destinatario predefinido. Estas tarjetas se agrupan dentro de un contenedor (`div`) que permite organizar su distribución visual.
-        
+       
 
-```
+``` html
 <hr class="separador-seccion">
 ```
 
@@ -566,46 +644,49 @@ Se utiliza el elemento `<hr>` con la clase `separador-seccion` para dividir visu
 
 ## **Funcionalidades Específicas de la Tarjeta**
 
-``
+```html
+
  <p class="materia">Materia: Programacion 3</p>
- 
+ ```
+
+```css
  .materia {
     font-weight: bold;
     color: var(--text-highlight);
 }
-``
+```
 
 Se utiliza la clase `.materia` para destacar visualmente la asignatura de cada profesor y/o ayudante. Esta decisión permite vincular la sección de profesores con la sección de cursos, facilitando la identificación de la materia correspondiente mediante énfasis visual, como el uso de negrita y colores destacados.
 
 ---
 
-```jsx
-<a href = "https://mail.google.com/mail/?view=cm&fs=1&to=gustavoramoscelli@gmail.com" 
+```js
+<a href = "https://mail.google.com/mail/?view=cm&fs=1&to=gustavoramoscelli@gmail.com"
                 target="_blank"
                 class = "btn-contactar">
                 Contactar
                 </a>
-                
-                
-                
-   .btn-contactar{ 
+```
+
+```css
+   .btn-contactar{
     background: var(--accent-light);
     color: var(--bg-primary);
-    border: none; 
+    border: none;
     border-radius:8px;
-    padding: 8px 16px; 
+    padding: 8px 16px;
     font-weight: bold;
     text-align: center;
-    text-decoration: none; 
+    text-decoration: none;
     cursor: pointer;
-    width: 75%; 
-    margin-top: auto; 
-    transition: 0.3s ease; 
+    width: 75%;
+    margin-top: auto;
+    transition: 0.3s ease;
  }
 
 .btn-contactar:hover {
-    background-color: var(--text-highlight); 
-    transform: translateY(-2px); 
+    background-color: var(--text-highlight);
+    transform: translateY(-2px);
 }
 ```
 
@@ -613,8 +694,86 @@ El parámetro `to` dentro de la URL permite cargar automáticamente el destinata
 
 El atributo `target="_blank"` permite abrir el enlace en una nueva pestaña del navegador, evitando que el usuario pierda la página actual.
 
-La clase `.btn-contactar`  se utiliza para estilizar el enlace de contacto como un botón interactivo. Se aplican propiedades de diseño como color de fondo, tipografía destacada, espaciado interno y bordes redondeados.  Además, se incorpora un efecto `hover` que modifica el color y genera un leve desplazamiento, mejorando la experiencia visual del usuario.
+La clase `.btn-contactar` se utiliza para estilizar el enlace de contacto como un botón interactivo. Se aplican propiedades de diseño como color de fondo, tipografía destacada, espaciado interno y bordes redondeados. Además, se incorpora un efecto `hover` que modifica el color y genera un leve desplazamiento, mejorando la experiencia visual del usuario.
 
 El enlace de contacto permite al alumno comunicarse directamente con el docente en caso de tener una consulta. En caso de no disponer previamente del correo electrónico, el sistema ya lo proporciona dentro de la tarjeta.
 
 Al seleccionar el botón "Contactar", el usuario es redirigido automáticamente a Gmail en una nueva pestaña, con la dirección del destinatario ya cargada, facilitando así el envío del mensaje.
+
+## Integrante: Federica Vignales
+
+### Sección "Login"
+
+El objetivo de esta sección es permitir que el usuario ingrese sus datos para acceder al aula virtual. Se diseñó una interfaz simple y clara, con un formulario centrado que solicita email, nombre y contraseña.
+
+### Desarrollo Lógico en JavaScript (script.js)
+
+Para esta sección se utilizó la manipulación del DOM mediante `innerHTML`, siguiendo la lógica general del proyecto SPA.
+
+### Función `cargarLogin()`
+
+Al ejecutarse, accede al contenedor principal y mediante la propiedad `innerHTML` reemplaza el contenido actual por la sección de login.
+
+```js
+function cargarLogin() {
+  contenedor.innerHTML = `
+        <section class="seccion-login">
+            <h1 class="titulo-login">Iniciar Sesión</h1>
+            <form class="form-login">
+                ...
+            </form>
+        </section>
+    `;
+}
+```
+
+Dentro del formulario se incluyen distintos campos:
+
+- Email (con validación automática gracias a `type="email"`)
+- Nombre
+- Contraseña
+
+Además, se agregó un botón de tipo `submit` para enviar los datos.
+Los inputs utilizan el atributo `required`, lo que permite validar que los campos estén completos antes de enviarse.
+
+Cuando el usuario hace clic en el botón “Ingresar”, el sistema utiliza la función `navegar(seccion)` (explicada anteriormente) para ejecutar `cargarLogin()` y mostrar esta vista.
+
+### Diseño en CSS
+
+Para el diseño utilicé la paleta de colores definida en el `:root`, manteniendo coherencia con el resto de la aplicación.
+
+El contenedor principal `.seccion-login` está centrado utilizando Flexbox, lo que permite que el formulario se adapte a distintos tamaños de pantalla.
+
+```css
+.seccion-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+```
+
+El formulario `.form-login` se diseñó como una card, con bordes redondeados, sombra y un ancho máximo para que no se estire demasiado en pantallas grandes.
+
+```css
+.form-login {
+  max-width: 420px;
+  border-radius: 12px;
+}
+```
+
+Cada campo `.campo` se organiza en columna para mantener una estructura clara entre el label y el input.
+
+También se agregaron efectos visuales para mejorar la experiencia del usuario:
+
+En los inputs `:focus`, cambia el borde y aparece una sombra.
+En el formulario y el botón `:hover`, se aplican pequeñas animaciones de desplazamiento.
+
+```css
+.btn-login:hover {
+  transform: translateY(-2px);
+}
+```
+
+### Consideraciones
+
+Esta sección fue pensada como base para una futura funcionalidad de autenticación. Actualmente el formulario no procesa los datos ingresados ni redirige al usuario, pero deja preparada la estructura necesaria para implementar lógica de login en el futuro.
