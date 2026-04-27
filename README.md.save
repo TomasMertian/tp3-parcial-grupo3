@@ -772,13 +772,12 @@ En el formulario y el botón `:hover`, se aplican pequeñas animaciones de despl
 .btn-login:hover {
   transform: translateY(-2px);
 }
-```
+```T
 
 ### Consideraciones
 
 Esta sección fue pensada como base para una futura funcionalidad de autenticación. Actualmente el formulario no procesa los datos ingresados ni redirige al usuario, pero deja preparada la estructura necesaria para implementar lógica de login en el futuro.
-
-Santiago De Dios — Sección "Inicio"
+Santiago — Sección "Inicio"
 Función cargarInicio()
 La función cargarInicio() es la encargada de renderizar toda la sección de bienvenida del portal. Utiliza asignación directa sobre contenedor.innerHTML con un Template Literal (backticks) para inyectar el HTML de la sección en el DOM sin necesidad de recargar la página.
 jsfunction cargarInicio() {
@@ -810,39 +809,6 @@ html<h1 class="header-cronograma">CRONOGRAMA TENTATIVO AÑO CURRICULAR</h1>
     <!-- ...11 meses más... -->
 </div>
 El cronograma está compuesto por 12 tarjetas, una por mes, generadas directamente dentro del Template Literal como contenido estático. Cada tarjeta (.hijo-grid) tiene una cabecera con el nombre del mes (.hijo-header) y un cuerpo con la descripción de las actividades académicas de ese período (.card-body).
-
-Interconexión con otras secciones — eventos internos
-Una parte clave de cargarInicio() ocurre después de inyectar el HTML. Los enlaces del contenido (#seccion-cursos, #seccion-contacto, etc.) son elementos generados dinámicamente, por lo que no existen en el DOM al momento de arrancar el script. Una vez que el HTML ya fue insertado, se los selecciona dentro del contenedor y se les asigna un evento de click individual:
-jsconst linkCursos = contenedor.querySelector("#seccion-cursos");
-linkCursos.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("cursos");
-});
-
-const linkContacto = contenedor.querySelector("#seccion-contacto");
-linkContacto.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("contacto");
-});
-
-const linkLogin = contenedor.querySelector("#seccion-login");
-linkLogin.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("login");
-});
-
-const linkProfesores = contenedor.querySelector("#seccion-profesores");
-linkProfesores.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("profesores");
-});
-
-const linkPerfil = contenedor.querySelector("#seccion-perfil");
-linkPerfil.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("perfil");
-});
-En cada listener se usa e.preventDefault() para cancelar el comportamiento por defecto del <a> (que haría scroll al inicio de la página por el href="#"). Después se llama a navegar() con el nombre de la sección destino, que se encarga de cargar el nuevo contenido y actualizar el ítem activo del menú. De esta forma, los enlaces del cuerpo de la página quedan integrados con el sistema de navegación global del sitio.
 
 Estilos CSS
 1. Layout principal con Flexbox
