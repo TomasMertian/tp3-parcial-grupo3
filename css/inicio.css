@@ -8,7 +8,7 @@
 
 #seccion-inicio .parrafo-inicio{
     font-style: italic;
-    opacity: 50%;
+    opacity: 75%;
 }
 #seccion-inicio .imagenes-container{
     display: flex;
@@ -26,7 +26,7 @@
 }
 #seccion-inicio .speech-informativo{
     font-style: italic;
-    opacity: 50%;
+    opacity: 75%;
 }
 
 #seccion-inicio .cronograma-grid{
@@ -64,7 +64,9 @@
     background-color: var(--accent-dark);
     font-style: oblique ;
 }
-
+a{
+    text-decoration: none;
+}
 #seccion-inicio .titulo-inicio, .parrafo-inicio, .imagenes-container, .speech-informativo, .header-cronograma {
     margin-bottom: 10px;
 } /*esto reemplaza las etiquetas <br>*/

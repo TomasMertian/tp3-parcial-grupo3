@@ -772,118 +772,57 @@ En el formulario y el botón `:hover`, se aplican pequeñas animaciones de despl
 .btn-login:hover {
   transform: translateY(-2px);
 }
-```
+```T
 
 ### Consideraciones
 
 Esta sección fue pensada como base para una futura funcionalidad de autenticación. Actualmente el formulario no procesa los datos ingresados ni redirige al usuario, pero deja preparada la estructura necesaria para implementar lógica de login en el futuro.
-
-## Integrante: Santiago De Dios
-
-### Sección "Inicio"
-
-### Función cargarInicio()
-
+Santiago — Sección "Inicio"
+Función cargarInicio()
 La función cargarInicio() es la encargada de renderizar toda la sección de bienvenida del portal. Utiliza asignación directa sobre contenedor.innerHTML con un Template Literal (backticks) para inyectar el HTML de la sección en el DOM sin necesidad de recargar la página.
-
-```js
-function cargarInicio() {
+jsfunction cargarInicio() {
     contenedor.innerHTML = `...markup HTML...`;
 }
-```
-
 Esta función debe ser llamada cuando el usuario navega a la sección de inicio. El objeto contenedor es una variable global que apunta al elemento principal del DOM que actúa como punto de montaje de la aplicación SPA.
 
-### Estructura HTML inyectada
-```html
-<div id="seccion-inicio">
-```
-Este es el contenedor raíz de toda la sección. Funciona como el marco principal que agrupa y organiza todos los bloques internos
-```html
-<h1 class="titulo-inicio">Bienvenido</h1>
+Estructura HTML inyectada
+html<div id="seccion-inicio">
+Este es el contenedor raíz de toda la sección. Funciona como el marco principal que agrupa y organiza todos los bloques internos.
+html<h1 class="titulo-inicio">Bienvenido</h1>
 <p class="parrafo-inicio">Le damos la bienvenida al aula virtual de la Universidad Nacional</p>
-```
 El título principal de bienvenida y el subtítulo institucional. La clase .parrafo-inicio aplica estilo en cursiva con opacidad reducida para lograr un efecto visualmente secundario, sin competir con el título.
-```html
-<div class="imagenes-container">
+html<div class="imagenes-container">
     <img src="./assets/img/925547ab210b12e869b3f331e63b54f3.jpg" alt="imagen-estudio" class="imagen-estudio">
 </div>
-```
 Contenedor flex que centra la imagen institucional. La clase .imagen-estudio le aplica un borde doble con la variable --text-highlight, bordes redondeados al 15% y un ancho fijo de 500 px que se vuelve fluido en pantallas chicas.
-```html
-<p class="speech-informativo">
+html<p class="speech-informativo">
     Bienvenidos al portal... <a href="#" id="seccion-cursos">Tus Cursos</a> ...
 </p>
-```
 Los cuatro párrafos .speech-informativo guían al usuario hacia las distintas secciones del portal mediante enlaces con IDs específicos. Esos IDs son capturados por el sistema de enrutamiento externo de la aplicación para disparar la función de carga correspondiente. Los enlaces apuntados son:
-| ID del enlace | Sección destino |
-| ------------- |:-------------:|
-| `#seccion-cursos` | Materias y cursos del alumno |
-| `#seccion-contacto` | Formulario de contacto institucional |
-| `#seccion-login` | Pantalla de inicio de sesión |
-| `#seccion-profesores` | Docentes asignados |
-| `#seccion-perfil` | Perfil personal del alumno autenticado |
-
-```html
-<h1 class="header-cronograma">CRONOGRAMA TENTATIVO AÑO CURRICULAR</h1>
+ID del enlaceSección destinoseccion-cursosMaterias y cursos del alumnoseccion-contactoFormulario de contacto institucionalseccion-loginPantalla de inicio de sesiónseccion-profesoresDocentes asignadosseccion-perfilPerfil personal del alumno autenticado
+html<h1 class="header-cronograma">CRONOGRAMA TENTATIVO AÑO CURRICULAR</h1>
 <div class="cronograma-grid">
     <div class="hijo-grid">
         <div class="hijo-header">Enero</div>
         <div class="card-body">Receso estival.</div>
     </div>
-    </div>
-```
+    <!-- ...11 meses más... -->
+</div>
 El cronograma está compuesto por 12 tarjetas, una por mes, generadas directamente dentro del Template Literal como contenido estático. Cada tarjeta (.hijo-grid) tiene una cabecera con el nombre del mes (.hijo-header) y un cuerpo con la descripción de las actividades académicas de ese período (.card-body).
-### Interconexión con otras secciones — Eventos internos
-Una parte clave de cargarInicio() ocurre después de inyectar el HTML. Los enlaces del contenido (#seccion-cursos, #seccion-contacto, etc.) son elementos generados dinámicamente, por lo que no existen en el DOM al momento de arrancar el script. Una vez que el HTML ya fue insertado, se los selecciona dentro del contenedor y se les asigna un evento de click individual:
-```js
-const linkCursosInicio = contenedor.querySelector("#seccion-cursos");
-linkCursosInicio.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("cursos");
-});
 
-const linkContactoInicio = contenedor.querySelector("#seccion-contacto");
-linkContactoInicio.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("contacto");
-});
-
-const linkLoginInicio = contenedor.querySelector("#seccion-login");
-linkLoginInicio.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("login");
-});
-
-const linkProfesoresInicio = contenedor.querySelector("#seccion-profesores");
-linkProfesoresInicio.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("profesores");
-});
-
-const linkPerfilInicio = contenedor.querySelector("#seccion-perfil");
-linkPerfilInicio.addEventListener("click", (e) => {
-    e.preventDefault();
-    navegar("perfil");
-});
-```
-En cada listener se usa e.preventDefault() para cancelar el comportamiento por defecto del enlace <a> (que haría scroll al inicio de la página por el href="#"). Después se llama a navegar() con el nombre de la sección destino, que se encarga de cargar el nuevo contenido y actualizar el ítem activo del menú. De esta forma, los enlaces del cuerpo de la página quedan integrados con el sistema de navegación global del sitio.
-### Estilos CSS
-#### 1. Layout principal con Flexbox
+Estilos CSS
+1. Layout principal con Flexbox
 El contenedor #seccion-inicio utiliza Flexbox en dirección columna con alineación centrada, ocupando el 100% del ancho disponible. Esto hace que todos los bloques internos se apilen verticalmente y queden centrados en pantalla.
-```css
-#seccion-inicio {
+css#seccion-inicio {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 100%;
 }
-```
-#### 2. Imagen institucional
+2. Imagen institucional
 La imagen tiene un borde doble cuyo color se toma de la variable --text-highlight, bordes redondeados del 15% que le dan un aspecto suave, y un ancho fijo de 500 px con altura automática para respetar las proporciones originales.
-```css
-.imagen-estudio {
+css.imagen-estudio {
     border: 5px;
     border-color: var(--text-highlight);
     border-style: double;
@@ -891,22 +830,18 @@ La imagen tiene un borde doble cuyo color se toma de la variable --text-highligh
     width: 500px;
     height: auto;
 }
-```
-#### 3. Grilla del cronograma con CSS Grid
+3. Grilla del cronograma con CSS Grid
 El cronograma utiliza CSS Grid con 4 columnas de igual fracción (1fr), un gap de 15 px entre tarjetas y un ancho del 60% del contenedor. Esto genera una disposición de 3 filas × 4 columnas que organiza visualmente los 12 meses del año.
-```css
-.cronograma-grid {
+css.cronograma-grid {
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     width: 60%;
 }
-```
-#### 4. Tarjetas de mes
+4. Tarjetas de mes
 Cada tarjeta (.hijo-grid) es un contenedor flex en dirección columna. La cabecera (.hijo-header) toma el color de fondo de --bg-secondary y usa --text-highlight para el texto. El cuerpo (.card-body) usa --accent-dark como fondo con borde punteado, y el texto aparece en estilo oblicuo.
-```css
-.hijo-header {
+css.hijo-header {
     padding: 10px;
     border-radius: 15px;
     background-color: var(--bg-secondary);
@@ -921,18 +856,12 @@ Cada tarjeta (.hijo-grid) es un contenedor flex en dirección columna. La cabece
     background-color: var(--accent-dark);
     font-style: oblique;
 }
-```
-#### 5. Variables CSS utilizadas
+5. Variables CSS utilizadas
 El componente depende de tres variables CSS definidas en el tema global de la aplicación:
-| Variable | Uso |
-| ------------- |:-------------:|
-| `--text-highlight` | Color del borde de imágenes y texto de tarjetas |
-| `--bg-secondary` | Fondo de la cabecera de cada tarjeta |
-| `--accent-dark` | Fondo del cuerpo de cada tarjeta |
-#### 6. Diseño responsivo
+VariableUso--text-highlightColor del borde de imágenes y texto de tarjetas--bg-secondaryFondo de la cabecera de cada tarjeta--accent-darkFondo del cuerpo de cada tarjeta
+6. Diseño responsivo
 A partir de los 768 px de ancho se aplica un media query que adapta el layout para dispositivos móviles: el contenedor ocupa el 100% del ancho, las imágenes se vuelven fluidas con un máximo de 400 px, y la grilla del cronograma colapsa de 4 a 2 columnas.
-```css
-@media (max-width: 768px) {
+css@media (max-width: 768px) {
     #seccion-inicio .imagenes-container {
         flex-direction: column;
     }
@@ -943,6 +872,3 @@ A partir de los 768 px de ancho se aplica un media query que adapta el layout pa
     #seccion-inicio .cronograma-grid {
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-    }
-}
-```
