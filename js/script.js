@@ -24,7 +24,14 @@ contenedor.innerHTML = `
         <div class="imagenes-container">
             <img src="./assets/img/925547ab210b12e869b3f331e63b54f3.jpg" alt="imagen-estudio" class="imagen-estudio">
         </div>
-        <p class="speech-informativo">Bienvenidos al portal de alumnos. Acá vas a encontrar toda la información sobre las mesas de exámenes, fechas administrativas y el cronograma de la Universidad.</p>
+        <p class="speech-informativo">Bienvenidos al portal de alumnos. Acá vas a encontrar toda la información sobre <a href="#" id="seccion-cursos">Tus Cursos </a>,las mesas de exámenes y el cronograma de la Universidad.</p>
+        
+        <p class="speech-informativo">Si tenés alguna consulta, no dudes en contactarnos a través de la sección de <a href="#" id="seccion-contacto">Contacto</a>.</p>
+        
+        <p class="speech-informativo"><a href="#" id="seccion-login">Logueate</a> para acceder a tu información personal sobre <a href="#" id="seccion-profesores">Profesores</a> y cursos asignados en <a href="#" id="seccion-perfil">Tu perfil</a>.</p>
+        
+        <p class="speech-informativo">¡Esperamos que tengas un excelente año academico!</p>
+        
         <h1 class ="header-cronograma"> CRONOGRAMA TENTATIVO AÑO CURRICULAR</h1>
         <div class="cronograma-grid">
             <div class="hijo-grid">
@@ -89,6 +96,26 @@ contenedor.innerHTML = `
         </div>    
     </div>
     `;
+    const linkCursosInicio = contenedor.querySelector("#seccion-cursos");
+    linkCursosInicio.addEventListener("click", (e) => {
+        e.preventDefault();
+        navegar("cursos")});
+    const linkContactoInicio = contenedor.querySelector("#seccion-contacto");
+    linkContactoInicio.addEventListener("click", (e) => {
+        e.preventDefault();
+        navegar("contacto")});
+    const linkLoginInicio = contenedor.querySelector("#seccion-login");
+    linkLoginInicio.addEventListener("click", (e) => {
+        e.preventDefault();
+        navegar("login")});
+    const linkProfesoresInicio = contenedor.querySelector("#seccion-profesores");
+    linkProfesoresInicio.addEventListener("click", (e) => {
+        e.preventDefault();
+        navegar("profesores")});
+    const linkPerfilInicio = contenedor.querySelector("#seccion-perfil");
+    linkPerfilInicio.addEventListener("click", (e) => {
+        e.preventDefault();
+        navegar("perfil")});
 }
 
 function cargarCursos() {
